@@ -1,0 +1,13 @@
+:root {
+  /* шрифт */
+  --my-font: "Open Sans", "Arial", sans-serif;
+
+  /* цвет фона */
+  --main-bg-color: #ffffff;
+
+  /* цвет текста */
+  --main-text-color: #333333;
+
+  /* размер текста */
+  --main-size: 16px;
+}
