@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  margin-top: -70px;
+  padding: 142px 0 124px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/hero/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  animation: hero 60s linear infinite;
+}
+
+.hero__container {
+  color: var(--light-text-color);
+  font-size: 18px;
+}
+
+.hero__title {
+  width: 36%;
+  margin-bottom: 20px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 82px;
+  text-shadow: 0 0 1px var(--dark-bg-color);
+}
+
+.hero__discription {
+  width: 36%;
+  margin: 0 0 92px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.hero__link {
+  display: inline-block;
+  position: relative;
+  padding: 14px 30px;
+  width: 314px;
+  border-radius: 100px;
+  border: 3px solid var(--active-text-color);
+  background-color: var(--active-text-color);
+  text-align: center;
+  line-height: 34px;
+  font-weight: 700;
+  outline: none;
+  transition: border-color linear 0.3s, background-color linear 0.3s;
+}
+
+.hero__link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -7px;
+  bottom: -7px;
+  left: -7px;
+  right: -7px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  transition: border-color linear 0.3s, background-color linear 0.3s;
+  z-index: -1;
+}
+
+.hero__link:focus-visible::before {
+  border-color: var(--hover-text-color);
+  background-color: var(--light-text-color);
+}
+
+.hero__link:hover {
+  border-color: var(--hover-text-color);
+}
+
+.hero__link:active {
+  border-color: var(--hover-text-color);
+  background-color: var(--focus-bg-color);
+}
+
+@keyframes hero {
+  0% {
+    transform: none;
+  }
+
+  15% {
+    transform: scale(2);
+  }
+
+  30% {
+    transform: none;
+    background-image: url("../img/hero/hero.jpg");
+  }
+
+  33% {
+    background-image: url("../img/hero/hero2.jpg");
+  }
+
+  45% {
+    transform: scale(2);
+  }
+
+  60% {
+    transform: none;
+    background-image: url("../img/hero/hero2.jpg");
+  }
+
+  63% {
+    background-image: url("../img/hero/hero3.jpg");
+  }
+
+  75% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: none;
+    background-image: url("../img/hero/hero3.jpg");
+  }
+}

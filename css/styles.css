@@ -10,8 +10,9 @@ html {
 }
 
 body {
+  position: relative;
   font-family: var(--my-font);
-  font-size: var(--main-size);
+  font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -21,10 +22,6 @@ body {
   background-color: var(--main-bg-color);
 
   min-width: 320px;
-}
-
-body.modal-active {
-  overflow: hidden;
 }
 
 img {
@@ -52,9 +49,45 @@ a {
   clear: both;
 }
 
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+}
+
 .container {
   width: 100%;
   max-width: 1630px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.no-js__warning {
+  display: none;
+}
+
+.no-js .no-js__warning {
+  display: block;
+}
+
+body.modal-active {
+  overflow: hidden;
 }

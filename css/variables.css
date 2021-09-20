@@ -4,10 +4,16 @@
 
   /* цвет фона */
   --main-bg-color: #ffffff;
+  --dark-bg-color: #000000;
+  --focus-bg-color: #7943a4;
+  --gray-color: #666666;
 
   /* цвет текста */
   --main-text-color: #333333;
+  --light-text-color: #ffffff;
+  --hover-text-color: #c283f3;
+  --active-text-color: #9d5cd0;
 
   /* размер текста */
-  --main-size: 16px;
+  --main-font-size: 16px;
 }

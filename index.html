@@ -9,28 +9,546 @@
   <meta name="Description" content="Blanchard - художественная галлерея">
   <title>Blanchard</title>
 
-  <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font">
-  <link rel="preload" href="./fonts/OpenSans-Bold.woff2" as="font">
-  <link rel="preload" href="./fonts/OpenSans-Italic.woff2" as="font">
-  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./css/fonts.css">
+
+  <link rel="stylesheet" href="./libs/simplebar/simplebar.css">
+  <script defer src="./libs/simplebar/simplebar.js"></script>
+
+  <link rel="stylesheet" href="./libs/choices/choices.min.css">
+  <script defer src="./libs/choices/choices.min.js"></script>
+
+  <link rel="stylesheet" href="./libs/swiper/swiper.css">
+  <script defer src="./libs/swiper/swiper.js"></script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/gallery.css">
+
+  <script defer src="./js/main.js"></script>
 </head>
 
-<body>
-  <header>
-    <div class="container">
-      hello world!
+<body class="no-js">
+  <p class="no-js__warning">Возникли проблемы с подключением Java Script. Сайт имеет ограниченную функциональность.</p>
+
+  <header class="header">
+    <div class="header__top">
+      <div class="container flex header__container">
+        <a class="header__logo">
+          <img class="header__img" src="./img/logo.svg" alt="Blanchard - художественная галлерея">
+        </a>
+
+        <nav class="flex header__nav">
+          <ul class="list flex header__list">
+            <li class="header__item">
+              <a href="#about" class="header__link">О нас</a>
+            </li>
+
+            <li class="header__item">
+              <a href="#gallery" class="header__link">Галерея</a>
+            </li>
+
+            <li class="header__item">
+              <a href="/" class="header__link">Каталог</a>
+            </li>
+
+            <li class="header__item">
+              <a href="/" class="header__link">События</a>
+            </li>
+
+            <li class="header__item">
+              <a href="/" class="header__link">Издания</a>
+            </li>
+
+            <li class="header__item">
+              <a href="/" class="header__link">Проекты</a>
+            </li>
+
+            <li class="header__item">
+              <a href="/" class="header__link">Контакты</a>
+            </li>
+          </ul>
+
+          <a class="flex header__login" href="/">Войти</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container flex header__container">
+        <nav class="header__menu menu js-header-menu">
+          <ul class="list flex menu__list">
+            <li class="menu__item">
+              <button class="btn menu__btn js-btn-menu" type="button">Реализм</button>
+
+              <ul class="list menu__submenu submenu js-simplebar">
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <button class="btn menu__btn js-btn-menu" type="button">Импрессионизм</button>
+
+              <ul class="list menu__submenu submenu js-simplebar">
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <button class="btn menu__btn js-btn-menu" type="button">Постимпрессионизм</button>
+
+              <ul class="list menu__submenu submenu js-simplebar">
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <button class="btn menu__btn js-btn-menu" type="button">Авангард</button>
+
+              <ul class="list menu__submenu submenu js-simplebar">
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <button class="btn menu__btn js-btn-menu" type="button">Футуризм</button>
+
+              <ul class="list menu__submenu submenu js-simplebar">
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_1.jpg" alt="Фрагмент картины Тинторето">
+
+                  <a class="submenu__link" href="#">Тинторето</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_2.jpg" alt="Фрагмент картины Фридрих">
+
+                  <a class="submenu__link" href="#">Фридрих</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_3.jpg" alt="Фрагмент картины Леонардо">
+
+                  <a class="submenu__link" href="#">Леонардо</a>
+                </li>
+
+                <li class="submenu__item">
+                  <img class="submenu__img" src="./img/menu_img_4.jpg" alt="Фрагмент картины Верроккью">
+
+                  <a class="submenu__link" href="#">Верроккью</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <form class="flex header__search search" action="/" method="GET">
+          <button class="btn search__btn" type="button" aria-label="Поиск по сайту" disabled></button>
+          <input class="search__input" type="search" name="search" placeholder="Поиск по сайту" required>
+        </form>
+      </div>
     </div>
   </header>
 
-  <div class="hero"></div>
+  <section class="hero">
+    <div class="container hero__container">
+      <h1 class="title hero__title">Прикоснитесь к прекрасному</h1>
 
-  <main></main>
+      <p class="hero__discription">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
+        создаёт предпосылки для новых предложений.</p>
+
+      <a href="#" class="hero__link">Подписаться на рассылку</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="about" id="about">
+      <div class="container about__container">
+        <h2 class="title about__title">О нас</h2>
+
+        <p class="about__description">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий
+          однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения
+          внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта
+          влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что
+          высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда
+          внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках
+          спецификации современных стандартов, действия представителей оппозиции набирают популярность среди
+          определенных слоев населения, а значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container gallery__container">
+        <div class="gallery__left">
+          <h2 class="title gallery__title">Галерея</h2>
+
+          <label class="galery__filter">
+            Фильтр:
+            <select class="gallery__select js-gallery-choice" name="filter">
+              <option class="gallery__option" value="all">Все</option>
+              <option class="gallery__option" value="painting" selected>Живопись</option>
+              <option class="gallery__option" value="drawing">Рисунок</option>
+              <option class="gallery__option" value="sculpture">Скульптура</option>
+            </select>
+          </label>
+
+          <p class="gallery__description">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+            <a class="gallery_auth" href="#">авторизуйтесь</a>, либо
+            воспользуйтесь лицензией.
+          </p>
+        </div>
+
+        <div class="gallery__right">
+          <div class="swiper js-gallery-swiper">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/1.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/2.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/3.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/4.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/5.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/6.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/7.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/8.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/9.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/10.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/11.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/12.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/13.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/14.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/15.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/16.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/17.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/18.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/19.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/20.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/21.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/22.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/23.jpg" alt="Картина">
+              </button>
+
+              <button class="swiper-slide btn js-swiper-btn" type="button" aria-label="Подробная информацию о картине">
+                <img class="swiper__img" src="./img/gallery/24.jpg" alt="Картина">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer></footer>
+
+  <div class="modal-gallery js-modal">
+    <div class="modal-gallery__wrapper">
+      <div class="modal-gallery__left">
+        <img class="modal-gallery__img" src="./img/gallery/modal-1.jpg" alt="Картина">
+      </div>
+
+      <div class="modal-gallery__right">
+        <button class="btn modal-gallery__button js-modal-gallery-close" type="button" aria-label="Закрыть"></button>
+
+        <h2 class="title modal-gallery__title">Казимир Малевич</h2>
+
+        <p class="modal-gallery__name">"Женщина с граблями"</p>
+
+        <p class="modal-gallery__date">1931-1932</p>
+
+        <p class="modal-gallery__description">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+          Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и
+          Варшавской выставок в 1927 году.</p>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

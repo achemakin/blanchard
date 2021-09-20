@@ -1,0 +1,15 @@
+.about {
+  padding: 80px 0 70px;
+}
+.about__container {
+}
+
+.about__title {
+  margin-bottom: 16px;
+}
+
+.about__description {
+  margin: 0;
+  width: 67.5%;
+  line-height: 32px;
+}
