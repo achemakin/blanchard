@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  margin-top: -70px;
-  padding: 142px 0 124px;
+  padding: 242px 0 123px;
+  margin-top: -170px;
   overflow: hidden;
 }
 
@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -2;
-  animation: hero 60s linear infinite;
+  animation: hero 120s linear infinite;
 }
 
 .hero__container {
@@ -35,7 +35,7 @@
 
 .hero__discription {
   width: 36%;
-  margin: 0 0 92px;
+  margin: 0 0 94px;
   line-height: 30px;
   font-weight: 700;
 }
@@ -90,7 +90,7 @@
   }
 
   15% {
-    transform: scale(2);
+    transform: scale(1.5);
   }
 
   30% {
@@ -103,7 +103,7 @@
   }
 
   45% {
-    transform: scale(2);
+    transform: scale(1.5);
   }
 
   60% {
@@ -116,7 +116,7 @@
   }
 
   75% {
-    transform: scale(2);
+    transform: scale(1.5);
   }
 
   100% {

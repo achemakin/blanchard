@@ -88,6 +88,44 @@ a {
   display: block;
 }
 
-body.modal-active {
-  overflow: hidden;
+.modals {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity ease-in-out 0.5s, visibility ease-in-out 0.5s;
 }
+
+body.modals-active {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+body.modals-active .modals {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.active {
+  display: block;
+}
+

@@ -1,22 +1,98 @@
 .header {
 }
 
+.header__container {
+}
+
 /* Верхняя часть header */
 
 .header__top {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__top::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
   background-color: var(--dark-bg-color);
   box-shadow: 0 0 4px var(--dark-bg-color);
 }
 
-.header__container {
-  justify-content: space-between;
-  align-items: center;
+.header__burger {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 36px;
+  height: 28px;
+  position: relative;
+  z-index: 1;
 
-  padding-top: 30px;
-  padding-bottom: 30px;
+  border: none;
+  border-top: 3px solid var(--light-text-color);
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: border-top-color linear 0.3s;
+}
+
+.header__burger:hover {
+  border-top-color: var(--active-text-color);
+}
+
+.header__burger:focus-visible {
+  border-top-color: var(--active-text-color);
+}
+
+.header__burger:active {
+  border-top-color: var(--focus-bg-color);
+}
+
+.header__burger::before,
+.header__burger::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  left: 0;
+  background-color: var(--light-text-color);
+  transition: background-color linear 0.3s, transform linear 0.3s;
+}
+
+.header__burger::before {
+  top: 9px;
+  width: 28px;
+}
+
+.header__burger::after {
+  bottom: 0;
+  width: 24px;
+}
+
+.header__burger:hover::before,
+.header__burger:hover::after {
+  background-color: var(--active-text-color);
+}
+
+.header__burger:focus-visible::before,
+.header__burger:focus-visible::after {
+  background-color: var(--active-text-color);
+}
+
+.header__burger:active::before,
+.header__burger:active::after {
+  background-color: var(--focus-bg-color);
 }
 
 .header__logo {
+  position: relative;
+  z-index: 1;
 }
 
 .header__img {
@@ -24,9 +100,11 @@
 }
 
 .header__nav {
-  justify-content: space-between;
   margin-top: 4px;
   width: 78.4%;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
 
   color: var(--light-text-color);
   font-size: calc(var(--main-font-size) + 2px);
@@ -36,11 +114,8 @@
   flex-wrap: wrap;
 }
 
-.header__item {
-}
-
 .header__item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 51px;
 }
 
 .header__link {
@@ -53,6 +128,7 @@
 
 .header__login {
   position: relative;
+  z-index: 1;
   align-items: center;
 
   padding: 2px 6px 8px;
@@ -70,6 +146,7 @@
   background-image: url("../img/login.svg");
   background-repeat: no-repeat;
   background-position: 50% 100%;
+  background-size: contain;
   transition: background-image linear 0.3s;
 }
 
@@ -99,19 +176,29 @@
 /* Нижняя часть header */
 
 .header__bottom {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  padding-top: 22px;
+  padding-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header__bottom .header__container {
-  padding-top: 23px;
-  padding-bottom: 17px;
+.header__bottom::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header__menu {
+  position: relative;
+  z-index: 1;
   width: 65.3%;
-  margin-left: -6px;
+  margin-left: -8px;
   font-size: 18px;
   color: var(--light-text-color);
 }
@@ -178,7 +265,8 @@
 .submenu {
   position: absolute;
   display: none;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   width: 300px;
   height: 300px;
   top: 47px;
@@ -205,6 +293,10 @@
 
 .submenu__img {
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .submenu__link {
@@ -234,14 +326,29 @@
 }
 
 .header__search {
+  position: relative;
+  z-index: 1;
   width: 15.65%;
 }
 
 .search__btn {
   margin-right: 7px;
-  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   width: 22px;
   height: 22px;
+  cursor: unset;
+}
+
+.search__btn svg {
+  pointer-events: none;
+  transition: fill linear 0.3s;
+}
+
+.search__btn rect,
+.search__btn path {
+  transition: fill linear 0.3s;
 }
 
 .search__input {
@@ -267,6 +374,46 @@
   color: var(--light-text-color);
   font-size: 18px;
   font-weight: 400;
+}
+
+.search__close {
+  display: none;
+  width: 29px;
+  height: 29px;
+  margin-left: 23px;
+  position: relative;
+}
+
+.search__close::before,
+.search__close::after {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 3px;
+  top: 13px;
+  left: -3px;
+  background-color: var(--light-text-color);
+  transition: background-color linear 0.3s;
+}
+
+.search__close::before {
+  transform: rotate(45deg);
+}
+
+.search__close::after {
+  transform: rotate(-45deg);
+}
+
+.search__close:hover::before,
+.search__close:hover::after,
+.search__close:focus-visible::before,
+.search__close:focus-visible::after {
+  background-color: var(--hover-text-color);
+}
+
+.search__close:active::before,
+.search__close:active::after {
+  background-color: var(--active-text-color);
 }
 
 /* Кастомный скролл */
