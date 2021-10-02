@@ -1,8 +1,4 @@
-@media (max-width: 1919px) {
-  .container {
-    max-width: 955px;
-  }
-
+@media (max-width: 1399px) {
   /* Header */
 
   .header::before {
@@ -72,6 +68,7 @@
 
   .header__item:not(:last-child) {
     margin-bottom: 31px;
+    margin-right: unset;
   }
 
   .header__login {
@@ -185,12 +182,11 @@
   }
 
   .hero__title {
-    width: 64%;
     margin-bottom: 12px;
   }
 
   .hero__discription {
-    width: 72%;
+    max-width: 660px;
     margin-bottom: 134px;
   }
 

@@ -3,6 +3,7 @@ document.body.classList.remove('no-js');
 const bodyEl = document.body;
 const headerEl = document.querySelector('.js-header');
 const burgerBtnEl = headerEl.querySelector('.js-burger-menu');
+const headerNavEl = headerEl.querySelector('.js-header-nav');
 const headerMenuEl = headerEl.querySelector('.js-header-menu');
 const headerBottomEl = headerEl.querySelector('.js-header-bottom');
 const searchBtnEl = headerEl.querySelector('.js-search-btn');
@@ -48,8 +49,8 @@ function closeBurger() {
 }
 
 document.addEventListener('click', event => {
-    const target = event.target;   
-    
+    const target = event.target;
+
     // Открытие/закрытие меню при нажатии кнопки меню или за границами окна меню
     const submenuOpen = headerMenuEl.querySelector('.submenu-open');
     const isSubmenuOpen = target.classList.contains('submenu-open');
@@ -108,13 +109,13 @@ document.addEventListener('click', event => {
 });
 
 // Закрытие меню при скролле
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', (e) => {
     const submenuOpen = headerMenuEl.querySelector('.submenu-open');
     const isBurgerOpen = headerEl.classList.contains('open');
     if (submenuOpen){      
        submenuOpen.classList.remove('submenu-open');
     }
-    if (isBurgerOpen) {
+    if (isBurgerOpen && window.scrollY >= headerNavEl.clientHeight - 40) {
       closeBurger();
     }
 });
@@ -165,7 +166,7 @@ const gallrySwiper = new Swiper('.js-gallery-swiper', {
         rows: 2
       },   
     },
-    1920: {
+    1400: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
@@ -194,8 +195,18 @@ scrollEl.forEach(el => new SimpleBar(el,
   }
 ));
 
+
 // Media query
-if (window.matchMedia("(max-width: 1919px)").matches) {  
+if (window.matchMedia("(max-width: 1399px)").matches) {  
   searchBtnEl.removeAttribute('disabled');
-  searchBtnEl.nextElementSibling.removeAttribute('placeholder')
+  searchBtnEl.nextElementSibling.removeAttribute('placeholder');
 }
+
+window.addEventListener('resize', () => {
+  if (window.matchMedia("(max-width: 1399px)").matches) {  
+    searchBtnEl.removeAttribute('disabled');
+    searchBtnEl.nextElementSibling.removeAttribute('placeholder');
+  } else {
+    searchBtnEl.setAttribute('disabled', true);
+  }
+});

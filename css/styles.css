@@ -74,9 +74,8 @@ a {
 }
 
 .container {
-  width: 100%;
-  max-width: 1630px;
-  padding: 0 15px;
+  max-width: 1700px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -129,3 +128,28 @@ body.modals-active .modals {
   display: block;
 }
 
+.bg-focus::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  background-color: var(--focus-bg-color);
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+
+.bg-focus:focus-visible::before {
+  opacity: 1;
+}
+
+.bg-focus:hover:not(:focus-visible) {
+  color: var(--hover-text-color);
+}
+
+.bg-focus:active:not(:focus-visible) {
+  color: var(--active-text-color);
+}

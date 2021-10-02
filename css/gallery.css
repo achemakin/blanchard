@@ -112,17 +112,18 @@
   transition: color linear 0.3s, border-bottom-color linear 0.3s;
 }
 
-.gallery_auth:hover {
+.gallery_auth:hover:not(:focus-visible) {
   color: var(--active-text-color);
   border-bottom-color: var(--active-text-color);
 }
 
-.gallery_auth:active {
+.gallery_auth:active:not(:focus-visible) {
   color: var(--focus-bg-color);
   border-bottom-color: transparent;
 }
 
 .gallery_auth:focus-visible {
+  color: var(--light-text-color);
   background-color: var(--active-text-color);
 }
 

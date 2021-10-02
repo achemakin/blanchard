@@ -1,6 +1,7 @@
 @media (max-width: 767px) {
   .container {
-    max-width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .title {
@@ -11,7 +12,7 @@
   .header__top {
     padding-top: 11px;
     padding-bottom: 10px;
-    width: 67%;
+    width: calc(50% + 48px);
   }
 
   .header__top::before {
@@ -42,8 +43,8 @@
   }
 
   .header__bottom {
-    width: 290px;
-    top: 0;
+    left: 15px;
+    right: 15px;
   }
 
   .header__search {
@@ -140,7 +141,7 @@
   }
 
   .hero__title {
-    width: 100%;
+    max-width: 100%;
     font-size: 32px;
     padding-left: 12px;
     padding-right: 12px;
@@ -201,6 +202,8 @@
 
   .gallery__right {
     top: 167px;
+    left: 15px;
+    right: 15px;
   }
 
   .swiper {
@@ -224,14 +227,15 @@
   .swiper-button-prev {
     top: unset;
     bottom: 0;
+    text-align: center;
   }
 
   .swiper-button-prev {
-    left: 80px;
+    left: calc(50% - 65px);
   }
 
   .swiper-button-next {
-    left: 180px;
+    left: calc(50% + 35px);
   }
 
   /* Modals */

@@ -7,7 +7,7 @@
 /* Верхняя часть header */
 
 .header__top {
-  padding-top: 30px;
+  padding-top: 29px;
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
@@ -100,8 +100,7 @@
 }
 
 .header__nav {
-  margin-top: 4px;
-  width: 78.4%;
+  width: 78%;
   position: relative;
   z-index: 1;
   justify-content: space-between;
@@ -115,15 +114,15 @@
 }
 
 .header__item:not(:last-child) {
-  margin-right: 51px;
+  margin-right: 62px;
 }
 
 .header__link {
   display: block;
-  padding: 2px 6px 8px;
+  position: relative;
   font-weight: 600;
-  transition: color linear 0.3s, background-color linear 0.3s;
   outline: none;
+  transition: color ease-in-out 0.4s;
 }
 
 .header__login {
@@ -131,53 +130,31 @@
   z-index: 1;
   align-items: center;
 
-  padding: 2px 6px 8px;
-  margin-right: -7px;
-
-  transition: color linear 0.3s, background-color linear 0.3s;
+  transition: color ease-in-out 0.4s;
   outline: none;
 }
 
-.header__login::before {
-  content: "";
-  width: 18px;
-  height: 13px;
-  margin-right: 5px;
-  background-image: url("../img/login.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  background-size: contain;
-  transition: background-image linear 0.3s;
+.header__login svg {
+  margin-right: 6px;
 }
 
-.header__login:focus-visible,
-.header__link:focus-visible {
-  background-color: var(--focus-bg-color);
+.header__login svg path {
+  transition: fill ease-in-out 0.4s;
 }
 
-.header__login:hover,
-.header__item:hover {
-  color: var(--hover-text-color);
+.header__login:hover:not(:focus-visible) svg path {
+  fill: var(--hover-text-color);
 }
 
-.header__login:hover::before {
-  background-image: url("../img/login_hover.svg");
-}
-
-.header__login:active,
-.header__item:active {
-  color: var(--active-text-color);
-}
-
-.header__login:active::before {
-  background-image: url("../img/login_active.svg");
+.header__login:active:not(:focus-visible) svg path {
+  fill: var(--active-text-color);
 }
 
 /* Нижняя часть header */
 
 .header__bottom {
-  padding-top: 22px;
-  padding-bottom: 17px;
+  padding-top: 24px;
+  padding-bottom: 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,8 +174,7 @@
 .header__menu {
   position: relative;
   z-index: 1;
-  width: 65.3%;
-  margin-left: -8px;
+  width: 64.6%;
   font-size: 18px;
   color: var(--light-text-color);
 }
@@ -214,52 +190,47 @@
 .menu__btn {
   display: flex;
   align-items: center;
-  padding: 2px 6px 8px;
   color: var(--light-text-color);
-  transition: color linear 0.3s;
+  transition: color ease-in-out 0.4s;
 }
 
-.menu__btn::after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  margin-left: 5px;
-  border-left: 1px solid var(--light-text-color);
-  border-bottom: 1px solid var(--light-text-color);
-  transform: rotate(-45deg);
-  transition: border linear 0.3s, transform linear 0.3s;
-}
-
-.menu__btn:hover {
-  color: var(--hover-text-color);
-}
-
-.menu__btn:focus-visible {
-  background-color: var(--focus-bg-color);
-}
-
-.menu__btn:active {
+.bg-focus.menu__btn:hover:not(:focus-visible):not(.submenu-open) {
   color: var(--active-text-color);
 }
 
-.menu__btn.submenu-open {
-  color: var(--active-text-color);
+.bg-focus.menu__btn:active:not(:focus-visible) {
+  color: var(--focus-bg-color);
 }
 
-.menu__btn:hover::after {
-  border-left-color: var(--hover-text-color);
-  border-bottom-color: var(--hover-text-color);
+.menu__btn span {
+  pointer-events: none;
+  margin-right: 3px;
 }
 
-.menu__btn:active::after {
-  border-left-color: var(--active-text-color);
-  border-bottom-color: var(--active-text-color);
+.menu__btn svg {
+  pointer-events: none;
+  transition: transform ease-in-out 0.4s;
 }
 
-.menu__btn.submenu-open::after {
-  border-left-color: var(--active-text-color);
-  border-bottom-color: var(--active-text-color);
-  transform: rotate(135deg) translate(4px, -4px);
+.menu__btn svg path {
+  transition: stroke ease-in-out 0.4s;
+}
+
+.menu__btn:hover:not(:focus-visible):not(.submenu-open) svg path {
+  stroke: var(--active-text-color);
+}
+
+.menu__btn:active:not(:focus-visible) svg path,
+.menu__btn.submenu-open:not(:focus-visible) svg path {
+  stroke: var(--focus-bg-color);
+}
+
+.menu__btn.submenu-open:not(:focus-visible) {
+  color: var(--focus-bg-color);
+}
+
+.menu__btn.submenu-open svg {
+  transform: rotate(180deg);
 }
 
 .submenu {
@@ -269,7 +240,7 @@
   padding-bottom: 40px;
   width: 300px;
   height: 300px;
-  top: 47px;
+  top: 44px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -312,12 +283,12 @@
   transition: border-color 0.3s linear;
 }
 
-.submenu__link:hover,
+.submenu__link:hover:not(:focus-visible),
 .submenu__link:focus-visible {
   border-color: var(--active-text-color);
 }
 
-.submenu__link:active {
+.submenu__link:active:not(:focus-visible) {
   background-image: linear-gradient(
     0deg,
     rgba(194, 131, 243, 0.4),
@@ -332,7 +303,8 @@
 }
 
 .search__btn {
-  margin-right: 7px;
+  margin-right: 10px;
+  flex-shrink: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -354,6 +326,7 @@
 .search__input {
   flex-grow: 1;
   border: none;
+  padding-bottom: 5px;
   background-color: transparent;
   color: var(--light-text-color);
 
