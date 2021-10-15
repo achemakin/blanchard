@@ -31,6 +31,9 @@
   <link rel="stylesheet" href="./css/hero.css">
   <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="./css/gallery.css">
+  <link rel="stylesheet" href="./css/catalog.css">
+  <link rel="stylesheet" href="./css/events.css">
+
   <link rel="stylesheet" href="./css/media-tablet.css">
   <link rel="stylesheet" href="./css/media__phone.css">
   <link rel="stylesheet" href="./css/media__mobile.css">
@@ -47,7 +50,7 @@
         <button class="header__burger js-burger-menu" type="button" aria-label="Открыть меню"></button>
 
         <a class="header__logo">
-          <img class="header__img" src="./img/logo.svg" alt="Blanchard - художественная галлерея">
+          <img class="header__img" src="./img/logo.svg" alt="Blanchard - художественная галлерея" loading="lazy">
         </a>
 
         <nav class="header__nav flex js-header-nav">
@@ -61,11 +64,11 @@
             </li>
 
             <li class="header__item">
-              <a href="/" class="bg-focus header__link">Каталог</a>
+              <a href="#catalog" class="bg-focus header__link">Каталог</a>
             </li>
 
             <li class="header__item">
-              <a href="/" class="bg-focus header__link">События</a>
+              <a href="#events" class="bg-focus header__link">События</a>
             </li>
 
             <li class="header__item">
@@ -105,55 +108,65 @@
                 </svg>
               </button>
 
-              <ul class="list menu__submenu submenu js-simplebar">
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_11.jpg" alt="Фрагмент картины Тинторето">
+              <div class="menu__submenu submenu">
+                <ul class="list submenu__list js-simplebar">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_11.jpg" alt="Фрагмент картины Тинторето"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Тинторето</a>
-                </li>
+                    <a class="submenu__link" href="#">Тинторето</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_12.jpg" alt="Фрагмент картины Фридрих">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_12.jpg" alt="Фрагмент картины Фридрих"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Фридрих</a>
-                </li>
+                    <a class="submenu__link" href="#">Фридрих</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_13.jpg" alt="Фрагмент картины Леонардо">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_13.jpg" alt="Фрагмент картины Леонардо"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Леонардо</a>
-                </li>
+                    <a class="submenu__link" href="#">Леонардо</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_14.jpg" alt="Фрагмент картины Верроккью">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_14.jpg" alt="Фрагмент картины Верроккью"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Верроккью</a>
-                </li>
+                    <a class="submenu__link" href="#">Верроккью</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_11.jpg" alt="Фрагмент картины Тинторето">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_11.jpg" alt="Фрагмент картины Тинторето"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Тинторето</a>
-                </li>
+                    <a class="submenu__link" href="#">Тинторето</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_12.jpg" alt="Фрагмент картины Фридрих">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_12.jpg" alt="Фрагмент картины Фридрих"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Фридрих</a>
-                </li>
+                    <a class="submenu__link" href="#">Фридрих</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_13.jpg" alt="Фрагмент картины Леонардо">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_13.jpg" alt="Фрагмент картины Леонардо"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Леонардо</a>
-                </li>
+                    <a class="submenu__link" href="#">Леонардо</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_14.jpg" alt="Фрагмент картины Верроккью">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_14.jpg" alt="Фрагмент картины Верроккью"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Верроккью</a>
-                </li>
-              </ul>
+                    <a class="submenu__link" href="#">Верроккью</a>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li class="menu__item">
@@ -165,43 +178,51 @@
                 </svg>
               </button>
 
-              <ul class="list menu__submenu submenu js-simplebar">
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_21.jpg" alt="Фрагмент картины Моне">
+              <div class="menu__submenu submenu">
+                <ul class="list submenu__list js-simplebar">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_21.jpg" alt="Фрагмент картины Моне"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Моне</a>
-                </li>
+                    <a class="submenu__link" href="#">Моне</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_22.jpg" alt="Фрагмент картины Сислей">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_22.jpg" alt="Фрагмент картины Сислей"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Сислей</a>
-                </li>
+                    <a class="submenu__link" href="#">Сислей</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_23.jpg" alt="Фрагмент картины Мане">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_23.jpg" alt="Фрагмент картины Мане"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Мане</a>
-                </li>
+                    <a class="submenu__link" href="#">Мане</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_24.jpg" alt="Фрагмент картины Ренуара">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_24.jpg" alt="Фрагмент картины Ренуара"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Ренуар</a>
-                </li>
+                    <a class="submenu__link" href="#">Ренуар</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_23.jpg" alt="Фрагмент картины Мане">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_23.jpg" alt="Фрагмент картины Мане"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Мане</a>
-                </li>
+                    <a class="submenu__link" href="#">Мане</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_24.jpg" alt="Фрагмент картины Ренуара">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_24.jpg" alt="Фрагмент картины Ренуара"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Ренуар</a>
-                </li>
-              </ul>
+                    <a class="submenu__link" href="#">Ренуар</a>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li class="menu__item">
@@ -213,43 +234,51 @@
                 </svg>
               </button>
 
-              <ul class="list menu__submenu submenu js-simplebar">
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_31.jpg" alt="Фрагмент картины Ван Гога">
+              <div class="menu__submenu submenu">
+                <ul class="list submenu__list js-simplebar">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_31.jpg" alt="Фрагмент картины Ван Гога"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Ван Гог</a>
-                </li>
+                    <a class="submenu__link" href="#">Ван Гог</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_32.jpg" alt="Фрагмент картины Сезанна">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_32.jpg" alt="Фрагмент картины Сезанна"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Сезанн</a>
-                </li>
+                    <a class="submenu__link" href="#">Сезанн</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_33.jpg" alt="Фрагмент картины Гогена">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_33.jpg" alt="Фрагмент картины Гогена"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Гоген</a>
-                </li>
+                    <a class="submenu__link" href="#">Гоген</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_34.jpg" alt="Фрагмент картины Сёра">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_34.jpg" alt="Фрагмент картины Сёра"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Сёра</a>
-                </li>
+                    <a class="submenu__link" href="#">Сёра</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_32.jpg" alt="Фрагмент картины Сезанна">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_32.jpg" alt="Фрагмент картины Сезанна"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Сезанн</a>
-                </li>
+                    <a class="submenu__link" href="#">Сезанн</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_33.jpg" alt="Фрагмент картины Гогена">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_33.jpg" alt="Фрагмент картины Гогена"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Гоген</a>
-                </li>
-              </ul>
+                    <a class="submenu__link" href="#">Гоген</a>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li class="menu__item">
@@ -261,79 +290,93 @@
                 </svg>
               </button>
 
-              <ul class="list menu__submenu submenu js-simplebar">
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_41.jpg" alt="Фрагмент картины Кандинского">
+              <div class="menu__submenu submenu">
+                <ul class="list submenu__list js-simplebar">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_41.jpg" alt="Фрагмент картины Кандинского"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Кандинский</a>
-                </li>
+                    <a class="submenu__link" href="#">Кандинский</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_42.jpg" alt="Фрагмент картины Маринетти">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_42.jpg" alt="Фрагмент картины Маринетти"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Маринетти</a>
-                </li>
+                    <a class="submenu__link" href="#">Маринетти</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_43.jpg" alt="Фрагмент картины Малевич">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_43.jpg" alt="Фрагмент картины Малевич"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Малевич</a>
-                </li>
+                    <a class="submenu__link" href="#">Малевич</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_44.jpg" alt="Фрагмент картины Пикассо">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_44.jpg" alt="Фрагмент картины Пикассо"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Пикассо</a>
-                </li>
+                    <a class="submenu__link" href="#">Пикассо</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_41.jpg" alt="Фрагмент картины Кандинского">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_41.jpg" alt="Фрагмент картины Кандинского"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Кандинский</a>
-                </li>
+                    <a class="submenu__link" href="#">Кандинский</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_42.jpg" alt="Фрагмент картины Маринетти">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_42.jpg" alt="Фрагмент картины Маринетти"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Маринетти</a>
-                </li>
+                    <a class="submenu__link" href="#">Маринетти</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_43.jpg" alt="Фрагмент картины Малевич">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_43.jpg" alt="Фрагмент картины Малевич"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Малевич</a>
-                </li>
+                    <a class="submenu__link" href="#">Малевич</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_44.jpg" alt="Фрагмент картины Пикассо">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_44.jpg" alt="Фрагмент картины Пикассо"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Пикассо</a>
-                </li>
+                    <a class="submenu__link" href="#">Пикассо</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_41.jpg" alt="Фрагмент картины Кандинского">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_41.jpg" alt="Фрагмент картины Кандинского"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Кандинский</a>
-                </li>
+                    <a class="submenu__link" href="#">Кандинский</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_42.jpg" alt="Фрагмент картины Маринетти">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_42.jpg" alt="Фрагмент картины Маринетти"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Маринетти</a>
-                </li>
+                    <a class="submenu__link" href="#">Маринетти</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_43.jpg" alt="Фрагмент картины Малевич">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_43.jpg" alt="Фрагмент картины Малевич"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Малевич</a>
-                </li>
+                    <a class="submenu__link" href="#">Малевич</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_44.jpg" alt="Фрагмент картины Пикассо">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_44.jpg" alt="Фрагмент картины Пикассо"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Пикассо</a>
-                </li>
-              </ul>
+                    <a class="submenu__link" href="#">Пикассо</a>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li class="menu__item">
@@ -345,55 +388,65 @@
                 </svg>
               </button>
 
-              <ul class="list menu__submenu submenu js-simplebar">
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_51.jpg" alt="Фрагмент картины Карра">
+              <div class="menu__submenu submenu">
+                <ul class="list submenu__list js-simplebar">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_51.jpg" alt="Фрагмент картины Карра"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Карра</a>
-                </li>
+                    <a class="submenu__link" href="#">Карра</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_52.jpg" alt="Фрагмент картины Прателла">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_52.jpg" alt="Фрагмент картины Прателла"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Прателла</a>
-                </li>
+                    <a class="submenu__link" href="#">Прателла</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_53.jpg" alt="Фрагмент картины Северени">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_53.jpg" alt="Фрагмент картины Северени"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Северени</a>
-                </li>
+                    <a class="submenu__link" href="#">Северени</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_54.jpg" alt="Фрагмент картины Балла">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_54.jpg" alt="Фрагмент картины Балла"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Балла</a>
-                </li>
+                    <a class="submenu__link" href="#">Балла</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_51.jpg" alt="Фрагмент картины Карра">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_51.jpg" alt="Фрагмент картины Карра loading="
+                      lazy">
 
-                  <a class="submenu__link" href="#">Карра</a>
-                </li>
+                    <a class="submenu__link" href="#">Карра</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_52.jpg" alt="Фрагмент картины Прателла">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_52.jpg" alt="Фрагмент картины Прателла"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Прателла</a>
-                </li>
+                    <a class="submenu__link" href="#">Прателла</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_53.jpg" alt="Фрагмент картины Северени">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_53.jpg" alt="Фрагмент картины Северени"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Северени</a>
-                </li>
+                    <a class="submenu__link" href="#">Северени</a>
+                  </li>
 
-                <li class="submenu__item">
-                  <img class="submenu__img" src="./img/header/menu_img_54.jpg" alt="Фрагмент картины Балла">
+                  <li class="submenu__item">
+                    <img class="submenu__img" src="./img/header/menu_img_54.jpg" alt="Фрагмент картины Балла"
+                      loading="lazy">
 
-                  <a class="submenu__link" href="#">Балла</a>
-                </li>
-              </ul>
+                    <a class="submenu__link" href="#">Балла</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </nav>
@@ -454,7 +507,6 @@
           <label class="galery__filter">
             Фильтр:
             <select class="gallery__select js-gallery-choice" name="filter">
-              <option class="gallery__option" value="all">Все</option>
               <option class="gallery__option" value="painting" selected>Живопись</option>
               <option class="gallery__option" value="drawing">Рисунок</option>
               <option class="gallery__option" value="sculpture">Скульптура</option>
@@ -463,241 +515,1074 @@
 
           <p class="gallery__description">
             Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-            <a class="gallery_auth" href="#">авторизуйтесь</a>, либо
+            <a class="bg-focus gallery_auth" href="#">авторизуйтесь</a>, либо
             воспользуйтесь лицензией.
           </p>
         </div>
 
         <div class="gallery__right">
-          <div class="swiper js-gallery-swiper">
+          <div class="swiper swiper--gallery js-gallery-swiper">
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-pagination--gallery"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev swiper-button-prev--gallery">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L0.999995 6L6 0.999998" stroke="white" />
+              </svg>
+            </div>
+            <div class="swiper-button-next swiper-button-next--gallery">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11L6.00001 6L1 0.999997" stroke="white" />
+              </svg>
+            </div>
 
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-1">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-1">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/1.webp 1x, ./img/gallery/1_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/1.jpg" srcset="./img/gallery/1_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/1.jpg" srcset="./img/gallery/1_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-2">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-2">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/2.webp 1x, ./img/gallery/2_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/2.jpg" srcset="./img/gallery/2_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/2.jpg" srcset="./img/gallery/2_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/3.webp 1x, ./img/gallery/3_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/3.jpg" srcset="./img/gallery/3_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/3.jpg" srcset="./img/gallery/3_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/4.webp 1x, ./img/gallery/4_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/4.jpg" srcset="./img/gallery/4_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/4.jpg" srcset="./img/gallery/4_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/5.webp 1x, ./img/gallery/5_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/5.jpg" srcset="./img/gallery/5_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/5.jpg" srcset="./img/gallery/5_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/6.webp 1x, ./img/gallery/6_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/6.jpg" srcset="./img/gallery/6_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/6.jpg" srcset="./img/gallery/6_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/7.webp 1x, ./img/gallery/7_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/7.jpg" srcset="./img/gallery/7_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/7.jpg" srcset="./img/gallery/7_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/8.webp 1x, ./img/gallery/8_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/8.jpg" srcset="./img/gallery/8_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/8.jpg" srcset="./img/gallery/8_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/9.webp 1x, ./img/gallery/9_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/9.jpg" srcset="./img/gallery/9_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/9.jpg" srcset="./img/gallery/9_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/10.webp 1x, ./img/gallery/10_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/10.jpg" srcset="./img/gallery/10_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/10.jpg" srcset="./img/gallery/10_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/11.webp 1x, ./img/gallery/11_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/11.jpg" srcset="./img/gallery/11_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/11.jpg" srcset="./img/gallery/11_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/12.webp 1x, ./img/gallery/12_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/12.jpg" srcset="./img/gallery/12_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/12.jpg" srcset="./img/gallery/12_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/13.webp 1x, ./img/gallery/13_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/13.jpg" srcset="./img/gallery/13_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/13.jpg" srcset="./img/gallery/13_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/14.webp 1x, ./img/gallery/14_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/14.jpg" srcset="./img/gallery/14_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/14.jpg" srcset="./img/gallery/14_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/15.webp 1x, ./img/gallery/15_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/15.jpg" srcset="./img/gallery/15_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/15.jpg" srcset="./img/gallery/15_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/16.webp 1x, ./img/gallery/16_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/16.jpg" srcset="./img/gallery/16_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/16.jpg" srcset="./img/gallery/16_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/17.webp 1x, ./img/gallery/17_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/17.jpg" srcset="./img/gallery/17_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/17.jpg" srcset="./img/gallery/17_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/18.webp 1x, ./img/gallery/18_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/18.jpg" srcset="./img/gallery/18_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/18.jpg" srcset="./img/gallery/18_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/19.webp 1x, ./img/gallery/19_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/19.jpg" srcset="./img/gallery/19_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/19.jpg" srcset="./img/gallery/19_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/20.webp 1x, ./img/gallery/20_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/20.jpg" srcset="./img/gallery/20_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/20.jpg" srcset="./img/gallery/20_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/21.webp 1x, ./img/gallery/21_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/21.jpg" srcset="./img/gallery/21_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/21.jpg" srcset="./img/gallery/21_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/22.webp 1x, ./img/gallery/22_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/22.jpg" srcset="./img/gallery/22_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/22.jpg" srcset="./img/gallery/22_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/23.webp 1x, ./img/gallery/23_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/23.jpg" srcset="./img/gallery/23_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/23.jpg" srcset="./img/gallery/23_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
 
-              <button class="swiper-slide btn js-gallery-open" type="button" aria-label="Подробная информацию о картине"
-                data-modal="gallery-0">
+              <button class="swiper-slide swiper-slide--gallery btn js-gallery-open" type="button"
+                aria-label="Подробная информацию о картине" data-modal="gallery-0">
                 <picture>
                   <source type="image/webp" srcset="./img/gallery/24.webp 1x, ./img/gallery/24_2x.webp 2x">
 
-                  <img class="swiper__img" src="./img/gallery/24.jpg" srcset="./img/gallery/24_2x.jpg 2x" alt="Картина">
+                  <img class="swiper__img" src="./img/gallery/24.jpg" srcset="./img/gallery/24_2x.jpg 2x" alt="Картина"
+                    loading="lazy">
                 </picture>
               </button>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="container catalog__container">
+        <div class="flex catalog__heading">
+          <h2 class="title catalog__title">Каталог</h2>
+
+          <ul class="list flex catalog__tabs tabs">
+            <li class="tabs__item">
+              <button class="btn tabs__btn js-tabs-btn" data-tab-path="france" aria-label="Французский язык"></button>
+            </li>
+
+            <li class="tabs__item">
+              <button class="btn tabs__btn js-tabs-btn" data-tab-path="germany" aria-label="Немецкий язык"></button>
+            </li>
+
+            <li class="tabs__item">
+              <button class="btn tabs__btn js-tabs-btn" data-tab-path="italy" aria-label="Итальянский язык"></button>
+            </li>
+
+            <li class="tabs__item">
+              <button class="btn tabs__btn tabs__btn--active js-tabs-btn" data-tab-path="russia"
+                aria-label="Русский язык"></button>
+            </li>
+
+            <li class="tabs__item">
+              <button class="btn tabs__btn js-tabs-btn" data-tab-path="belgium" aria-label="Бельгийский язык"></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__tab tab tab--active js-catalog-tab" data-tab-target="russia">
+          <p class="tab__description">Акционеры крупнейших компаний, которые представляют собой яркий пример
+            континентально-европейского типа политической
+            культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей
+            картины,
+            стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов,
+            которые жаждут
+            быть функционально разнесены на независимые элементы.</p>
+
+          <div class="flex tab__wrapper">
+            <div class="tab__left" id="tab-left">
+              <article class="tab__article tab__article--active js-tab-article" data-target="Ghirlandaio">
+                <picture>
+                  <source type="image/webp" srcset="./img/catalog/image1.webp 1x, ./img/catalog/image1_2x.webp 2x">
+
+                  <img class="tab__img" src="./img/catalog/image1.jpg" srcset="./img/catalog/image1_2x.jpg 2x"
+                    alt="Портрет Доменико Гирландайо" loading="lazy">
+                </picture>
+
+
+
+                <h3 class="title tab__title">Доменико Гирландайо</h3>
+
+                <p class="tab__data">2 июня 1448 — 11 января 1494</p>
+
+                <p class="tab__info">Один из ведущих флорентийских художников Кватроченто, основатель
+                  художественной династии, которую
+                  продолжили его брат
+                  Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал
+                  профессиональными
+                  навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских
+                  персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
+              </article>
+
+              <article class="tab__article js-tab-article" data-target="default">
+                <div class="tab__img-default">
+                  <p class="tab__img-name js-img-name">Х-художник</p>
+                </div>
+
+                <h3 class="title tab__title tab__title-default">Что мы о нём знаем?</h3>
+
+                <p class="tab__info">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!.
+                </p>
+
+                <a href="#gallery" class="bg-focus tab__link-default">В галерею</a>
+              </article>
+            </div>
+
+            <ul class="list tab__right">
+              <li class="accordion accordion--active js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="true">
+                  <span class="bg-focus">C 1400 по 1499 гг.</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="false">
+                  <ul class="list accordion__list">
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Бенедетто ди
+                        Биндо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Бергоньоне,
+                        Амброджо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Биссоло,
+                        Франческо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Больтраффио,
+                        Джованни</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Бонсиньори,
+                        Франческо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Боттичини,
+                        Рафаэлло</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Брамантино</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Бреа,
+                        Людовико</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Бьяджо
+                        д’Антонио
+                        Туччи</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Веккьетта</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Андреа
+                        Верроккьо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button
+                        class="bg-focus btn accordion__content-btn accordion__content-btn--active js-acc-content-btn"
+                        type="button" data-path="Ghirlandaio">Доменико
+                        Гирландайо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Беноццо
+                        Гоццоли</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Граначчи,
+                        Франческо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Грегорио ди
+                        Чекко</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Джованни да
+                        Удине</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Джованни ди
+                        Паоло</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Джорджоне</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Парентино,
+                        Бернардо</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Пезеллино</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Пьетро
+                        Перуджино</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Перуцци,
+                        Бальдассаре</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Пизанелло</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Пинтуриккьо</button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">C 1500 по 1599 гг.</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Здесь пока пусто</h3>
+
+                      <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
+                        себя</p>
+
+                      <a href="#gallery" class="bg-focus default__link">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">C 1600 по 1699 гг.</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Здесь пока пусто</h3>
+
+                      <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
+                        себя</p>
+
+                      <a href="#gallery" class="default__link">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">C 1700 по 1799 гг.</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Здесь пока пусто</h3>
+
+                      <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
+                        себя</p>
+
+                      <a href="#gallery" class="default__link">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">C 1800 по 1899 гг.</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Здесь пока пусто</h3>
+
+                      <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
+                        себя</p>
+
+                      <a href="#gallery" class="default__link">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">C 1900 по 1999 гг.</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Здесь пока пусто</h3>
+
+                      <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
+                        себя</p>
+
+                      <a href="#gallery" class="default__link">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">C 2000 г.</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Здесь пока пусто</h3>
+
+                      <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
+                        себя</p>
+
+                      <a href="#gallery" class="default__link">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+
+        <div class="catalog__tab tab js-catalog-tab" data-tab-target="germany">
+          <p class="tab__description">Aktionäre der größten Unternehmen, die ein Paradebeispiel sind
+            kontinental-europäischer politischer Kultur, als Verstoß gegen die universellen Normen der Ethik und Moral
+            erklärt werden. Nur ein Teil des Ganzen sein Gemälde, das Bestreben, die traditionelle Produktion, die
+            Nanotechnologie zu verdrängen und bis heute das Los der Liberalen zu bleiben, die sich sehnen funktional in
+            unabhängige Elemente unterteilt werden.</p>
+
+          <div class="flex tab__wrapper">
+            <div class="tab__left js-tab-left">
+              <article class="tab__article tab__article--active js-tab-article" data-target="Ghirlandaio">
+                <img class="tab__img" src="./img/catalog/image1.jpg" alt="Изображение" loading="lazy">
+
+                <h3 class="title tab__title">Domenico Ghirlandaio</h3>
+
+                <p class="tab__data">2. Juni 1448 - 11. Januar 1494</p>
+
+                <p class="tab__info">Einer der führenden Florentiner Quattrocento-Maler, Gründer Künstlerdynastie, die
+                  weitergeführt von seinem Bruder David und Sohn von Ridolfo. Der Leiter der Kunstwerkstatt, in der der
+                  junge Michelangelo ein Jahr lang meisterte Fachmann Fähigkeiten. Der Autor von Freskenzyklen, in denen
+                  konvex, mit allerlei Details das Zuhause gezeigt wird biblisches Leben Charaktere (in ihrer Rolle sind
+                  die adeligen Bürger von Florenz in den Kostümen der damaligen Zeit).</p>
+              </article>
+
+              <article class="tab__article js-tab-article" data-target="default">
+                <div class="tab__img-default">
+                  <p class="tab__img-name js-img-name">Х-художник</p>
+                </div>
+
+                <h3 class="title tab__title tab__title-default">Was wissen wir über ihn?</h3>
+
+                <p class="tab__info">Bisher nichts ... Aber wir wissen sicher, dass die Galerie etwas zu sehen hat!.
+                </p>
+
+                <a href="#gallery" class="bg-focus tab__link-default">Zur Galerie</a>
+              </article>
+            </div>
+
+            <ul class="list tab__right">
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="true">
+                  <span class="bg-focus">Von 1400 bis 1499</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="false">
+                  <ul class="list accordion__list">
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Benedetto di Bindo</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Bergognon, Ambrogio</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Bissolo, Francesco</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Boltraffio, Giovanni</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Bonsignori, Francesco</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Botticini, Rafaello</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Bramantino</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Brea, Ludovico</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Biagio d'Antonio Tucci</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Vecchietta</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Andrea Verrocchio</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button
+                        class="bg-focus btn accordion__content-btn accordion__content-btn--active js-acc-content-btn"
+                        type="button" data-path="Ghirlandaio">Domenico Ghirlandaio</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Benozzo Gozzoli</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Granacci, Francesco</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Gregorio di Cecco</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Giovanni da Udine</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Giovanni di Paolo</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Giorgione</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Parentino, Bernardo</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Pesellino</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Pietro Perugin</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Peruzzi, Baldassare</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Pisanello</button>
+                    </li>
+
+                    <li class="accordion__content-item">
+                      <button class="bg-focus btn accordion__content-btn js-acc-content-btn" type="button"
+                        data-path="default">Pinturicchio</button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">Von 1500 bis 1599</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Hier ist es vorerst leer</h3>
+
+                      <p class="default__description">Und in der Galerie findet man immer etwas Interessantes für
+                        mich selber</p>
+
+                      <a href="#gallery" class="bg-focus default__link">Zur Galerie</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">Von 1600 bis 1699</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Hier ist es vorerst leer</h3>
+
+                      <p class="default__description">Und in der Galerie findet man immer etwas Interessantes für
+                        mich selber</p>
+
+                      <a href="#gallery" class="bg-focus default__link">Zur Galerie</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">Von 1700 bis 1799</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Hier ist es vorerst leer</h3>
+
+                      <p class="default__description">Und in der Galerie findet man immer etwas Interessantes für
+                        mich selber</p>
+
+                      <a href="#gallery" class="bg-focus default__link">Zur Galerie</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">Von 1800 bis 1899</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Hier ist es vorerst leer</h3>
+
+                      <p class="default__description">Und in der Galerie findet man immer etwas Interessantes für
+                        mich selber</p>
+
+                      <a href="#gallery" class="bg-focus default__link">Zur Galerie</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">Von 1900 bis 1999</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Hier ist es vorerst leer</h3>
+
+                      <p class="default__description">Und in der Galerie findet man immer etwas Interessantes für
+                        mich selber</p>
+
+                      <a href="#gallery" class="bg-focus default__link">Zur Galerie</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion js-accordion">
+                <button class="btn accordion__btn js-accordion-btn" type="button" aria-expanded="false">
+                  <span class="bg-focus">Von 2000</span>
+                </button>
+
+                <div class="accordion__content" aria-hidden="true">
+                  <div class="flex default">
+                    <div class="default__left"></div>
+
+                    <div class="default__right">
+                      <h3 class="title tab__title default__title">Hier ist es vorerst leer</h3>
+
+                      <p class="default__description">Und in der Galerie findet man immer etwas Interessantes für
+                        mich selber</p>
+
+                      <a href="#gallery" class="bg-focus default__link">Zur Galerie</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="catalog__tab tab tab__default js-catalog-tab" data-tab-target="france">
+          <h3 class="title">В настоящее время ведется работа по перводу на французский язык. Извините за доставленные
+            неудобства.</h3>
+        </div>
+
+        <div class="catalog__tab tab tab__default js-catalog-tab" data-tab-target="italy">
+          <h3 class="title">В настоящее время ведется работа по перводу на итальянский язык. Извините за доставленные
+            неудобства.</h3>
+        </div>
+
+        <div class="catalog__tab tab tab__default js-catalog-tab" data-tab-target="belgium">
+          <h3 class="title">В настоящее время ведется работа по перводу на Бельгийский язык. Извините за доставленные
+            неудобства.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="container events__container">
+        <h2 class="title events__title">События</h2>
+
+        <div class="swiper events__swiper js-events-swiper">
+          <!-- Additional required wrapper -->
+          <ul class="swiper-wrapper list events__swiper-wrapper">
+            <!-- Slides -->
+            <li class="swiper-slide events__swiper-slide js-events-slide">
+              <picture>
+                <source type="image/webp" srcset="./img/events/event_1.webp 1x, ./img/events/event_1_2x.webp 2x">
+
+                <img class="events__swiper-img" src="./img/events/event_1.jpg" srcset="./img/events/event_1_2x.jpg 2x"
+                  alt="Книжная гравюра в живом восприятии" loading="lazy">
+              </picture>
+
+              <div class="events__wrapper">
+                <p class="events__info">Музей им. Щусева</p>
+
+                <p class="events__data">с 20 марта по 30 апреля</p>
+
+                <h3 class="title events__slide-title">Книжная гравюра в живом восприятии</h3>
+
+                <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель
+                  художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+
+                <a href="#" class="bg-focus events__link">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="swiper-slide events__swiper-slide js-events-slide">
+              <picture>
+                <source type="image/webp" srcset="./img/events/event_2.webp 1x, ./img/events/event_2_2x.webp 2x">
+
+                <img class="events__swiper-img" src="./img/events/event_2.jpg" srcset="./img/events/event_2_2x.jpg 2x"
+                  alt="Октрытая дискуссия. Дмитрий Петров и Сергей Ильин." loading="lazy">
+              </picture>
+
+              <div class="events__wrapper">
+                <p class="events__info">MMOMA</p>
+
+                <p class="events__data">с 20 марта 19:00</p>
+
+                <h3 class="title events__slide-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+
+                <p class="events__description">Высокий уровень вовлечения представителей целевой аудитории является
+                  четким доказательством простого факта.</p>
+
+                <a href="#" class="bg-focus events__link">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="swiper-slide events__swiper-slide js-events-slide">
+              <picture>
+                <source type="image/webp" srcset="./img/events/event_3.webp 1x, ./img/events/event_3_2x.webp 2x">
+
+                <img class="events__swiper-img" src="./img/events/event_3.jpg" srcset="./img/events/event_3_2x.jpg 2x"
+                  alt="Выставка Формация 2020" loading="lazy">
+              </picture>
+
+              <div class="events__wrapper">
+                <p class="events__info">Еврейский музей</p>
+
+                <p class="events__data">с 31 марта по 21 апреля</p>
+
+                <h3 class="title events__slide-title">Выставка «Формация 2020»</h3>
+
+                <p class="events__description">Идейные соображения высшего порядка, а также современная методология
+                  разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+
+                <a href="#" class="bg-focus events__link">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="swiper-slide events__swiper-slide js-events-slide">
+              <picture>
+                <source type="image/webp" srcset="./img/events/event_4.webp 1x, ./img/events/event_4_2x.webp 2x">
+
+                <img class="events__swiper-img" src="./img/events/event_4.jpg" srcset="./img/events/event_4_2x.jpg 2x"
+                  alt="XXIV Международная биеннале молодого искусства" loading="lazy">
+              </picture>
+
+              <div class="events__wrapper">
+                <p class="events__info">Третьяковка на Крымском валу</p>
+
+                <p class="events__data">с 30 марта по 30 апреля</p>
+
+                <h3 class="title events__slide-title">XXIV Международная биеннале молодого искусства</h3>
+
+                <p class="events__description">Внезапно, реплицированные с зарубежных источников, современные
+                  исследования.</p>
+
+                <a href="#" class="bg-focus events__link">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="swiper-slide events__swiper-slide js-events-slide">
+              <picture>
+                <source type="image/webp" srcset="./img/events/event_5.webp 1x, ./img/events/event_5_2x.webp 2x">
+
+                <img class="events__swiper-img" src="./img/events/event_5.jpg" srcset="./img/events/event_5_2x.jpg 2x"
+                  alt="Джон Винзор. Фотографии из серии Метафора серебра" loading="lazy">
+              </picture>
+
+              <div class="events__wrapper">
+                <p class="events__info">ММАМ</p>
+
+                <p class="events__data">с 8 апреля по 20 мая</p>
+
+                <h3 class="title events__slide-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+
+                <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель
+                  художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+
+                <a href="#" class="bg-focus events__link">Подробнее</a>
+              </div>
+            </li>
+          </ul>
+          <!-- If we need pagination -->
+          <div class="events__swiper-pagination"></div>
+        </div>
+
+        <button class="btn events__all js-events-all" type="button">Все события</button>
       </div>
     </section>
   </main>
@@ -711,7 +1596,8 @@
           <picture>
             <source type="image/webp" srcset="./img/gallery/1.webp 1x, ./img/gallery/1_2x.webp 2x">
 
-            <img class="swiper__img" src="./img/gallery/1.jpg" srcset="./img/gallery/1_2x.jpg 2x" alt="Картина">
+            <img class="swiper__img" src="./img/gallery/1.jpg" srcset="./img/gallery/1_2x.jpg 2x" alt="Картина"
+              loading="lazy">
           </picture>
         </div>
 
@@ -736,7 +1622,8 @@
           <picture>
             <source type="image/webp" srcset="./img/gallery/2.webp 1x, ./img/gallery/2_2x.webp 2x">
 
-            <img class="swiper__img" src="./img/gallery/2.jpg" srcset="./img/gallery/2_2x.jpg 2x" alt="Картина">
+            <img class="swiper__img" src="./img/gallery/2.jpg" srcset="./img/gallery/2_2x.jpg 2x" alt="Картина"
+              loading="lazy">
           </picture>
         </div>
 
@@ -751,8 +1638,7 @@
 
           <p class="modal-gallery__description">Картина из второй серии крестьянского цикла работ Казимира Малевича.
             Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской
-            и
-            Варшавской выставок в 1927 году.</p>
+            и Варшавской выставок в 1927 году.</p>
         </div>
       </div>
     </div>
@@ -760,7 +1646,7 @@
     <div class="modal js-modal" data-id="gallery-0">
       <div class="modal-gallery">
         <div class="modal-gallery__left">
-          <img class="modal-gallery__img" src="/" alt="Картина">
+          <img class="modal-gallery__img" src="/" alt="Картина" loading="lazy">
         </div>
 
         <div class="modal-gallery__right">

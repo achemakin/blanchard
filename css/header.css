@@ -244,8 +244,8 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.no-js .submenu {
-  overflow-y: scroll;
+.submenu__list {
+  height: 220px;
 }
 
 .submenu-open ~ .submenu {
@@ -392,8 +392,6 @@
 /* Кастомный скролл */
 
 .simplebar-track.simplebar-vertical {
-  top: 40px;
-  bottom: 40px;
   right: 19px;
   width: 2px;
   background-color: var(--dark-bg-color);

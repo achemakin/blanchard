@@ -198,6 +198,10 @@
 
   /* Gallery */
 
+  .gallery {
+    padding-bottom: 71px;
+  }
+
   .gallery__left {
     width: 30.3%;
   }
@@ -210,9 +214,99 @@
     width: 64.4%;
   }
 
-  .swiper-slide {
+  .swiper-slide--gallery {
     width: 280px;
     height: 280px;
+  }
+
+  /* Catalog */
+  .catalog {
+    padding-top: 77px;
+  }
+
+  .catalog__title {
+    margin-right: 43px;
+  }
+
+  .catalog__tabs {
+    padding-top: 18px;
+  }
+
+  .catalog__heading {
+    margin-bottom: 12px;
+  }
+
+  .tab__default .title {
+    font-size: 30px;
+  }
+
+  .tab__description {
+    margin-bottom: 39px;
+  }
+
+  .tab__left {
+    width: 47.3%;
+  }
+
+  .tab__right {
+    width: 47.4%;
+  }
+
+  .accordion--active .accordion__content {
+    padding-bottom: 26px;
+  }
+
+  .accordion__list {
+    width: 100%;
+    height: 384px;
+  }
+
+  .accordion__content-item {
+    width: 60%;
+  }
+
+  .default__left {
+    width: 189px;
+    height: 130px;
+    margin-right: 25px;
+  }
+
+  .default__left::after {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .default__right {
+    width: 50%;
+  }
+
+  .default__description {
+    width: 100%;
+  }
+
+  /* Events */
+  .events__swiper-slide {
+    min-height: 682px;
+  }
+
+  .events__swiper-img {
+    height: 200px;
+  }
+
+  .events__wrapper {
+    padding-left: 34px;
+  }
+
+  .events__description {
+    padding-right: 14px;
+    max-height: 240px;
+  }
+
+  .events__link {
+    bottom: 50px;
+    left: 36px;
   }
 
   /* Modals */

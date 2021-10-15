@@ -97,6 +97,10 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.choices .is-selected {
+  display: none;
+}
+
 .gallery__description {
   margin: 0;
   font-size: 16px;
@@ -124,18 +128,17 @@
 
 .gallery_auth:focus-visible {
   color: var(--light-text-color);
-  background-color: var(--active-text-color);
 }
 
 .gallery__right {
   width: 71.9%;
 }
 
-.swiper {
+.swiper--gallery {
   padding-top: 84px;
 }
 
-.swiper-pagination {
+.swiper-pagination--gallery {
   bottom: unset;
   top: 29px;
   padding-left: 52px;
@@ -143,8 +146,8 @@
   color: var(--light-text-color);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-button-prev--gallery,
+.swiper-button-next--gallery {
   top: 47px;
   left: 3px;
   width: 30px;
@@ -159,36 +162,36 @@
   transition: background-color linear 0.3s;
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
+.swiper-button-prev--gallery:hover,
+.swiper-button-next--gallery:hover {
   background-color: var(--active-text-color);
 }
 
-.swiper-button-prev:active,
-.swiper-button-next:active {
+.swiper-button-prev--gallery:active,
+.swiper-button-next--gallery:active {
   background-color: var(--focus-bg-color);
 }
 
-.swiper-button-prev:focus-visible,
-.swiper-button-next:focus-visible {
+.swiper-button-prev--gallery:focus-visible,
+.swiper-button-next--gallery:focus-visible {
   border: 2px solid var(--dark-bg-color);
 }
 
-.swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
+.swiper-button-next--gallery.swiper-button-disabled,
+.swiper-button-prev--gallery.swiper-button-disabled {
   opacity: 0.5;
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: inherit;
+.swiper-button-prev--gallery:after,
+.swiper-button-next--gallery:after {
+  content: "";
 }
 
-.swiper-button-next {
+.swiper-button-next--gallery {
   left: 104px;
 }
 
-.swiper-slide {
+.swiper-slide--gallery {
   width: 350px;
   height: 350px;
   position: relative;
@@ -197,11 +200,11 @@
   outline: none;
 }
 
-.swiper-slide:focus-visible {
+.swiper-slide--gallery:focus-visible {
   border: 3px solid var(--focus-bg-color);
 }
 
-.swiper-slide::after {
+.swiper-slide--gallery::after {
   content: "";
   display: block;
   position: absolute;
@@ -217,11 +220,11 @@
   transition: opacity linear 0.3s;
 }
 
-.swiper-slide:hover::after {
+.swiper-slide--gallery:hover::after {
   opacity: 1;
 }
 
-.swiper-slide::before {
+.swiper-slide--gallery::before {
   content: "";
   display: block;
   position: absolute;
@@ -234,7 +237,7 @@
   transition: opacity linear 0.3s;
 }
 
-.swiper-slide:active:before {
+.swiper-slide--gallery:active:before {
   opacity: 0.4;
 }
 

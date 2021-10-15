@@ -1,0 +1,398 @@
+.catalog {
+  padding-top: 80px;
+}
+
+.catalog__heading {
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.catalog__title {
+  margin-right: 40px;
+  line-height: 1.5;
+}
+
+.tabs__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.tabs__btn {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: filter 0.4s ease-in-out;
+}
+
+.tabs__btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: border-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.tabs__btn:focus-visible {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.tabs__btn:hover:not(:focus-visible) {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.tabs__btn:active:not(:focus-visible) {
+  filter: unset;
+}
+
+.tabs__btn:active:not(:focus-visible)::before {
+  border-color: var(--focus-bg-color);
+}
+
+.tabs__btn--active {
+  pointer-events: none;
+}
+
+.tabs__btn--active::before {
+  transform: scale(1.3);
+  border-color: var(--focus-bg-color);
+}
+
+.tabs__btn--active:active:not(:focus-visible) {
+  border-color: transparent;
+}
+
+.tabs__btn[data-tab-path="france"] {
+  background-image: url("../img/catalog/france.png");
+}
+
+.tabs__btn[data-tab-path="germany"] {
+  background-image: url("../img/catalog/germany.png");
+}
+
+.tabs__btn[data-tab-path="italy"] {
+  background-image: url("../img/catalog/italy.png");
+}
+
+.tabs__btn[data-tab-path="russia"] {
+  background-image: url("../img/catalog/russia.png");
+}
+
+.tabs__btn[data-tab-path="belgium"] {
+  background-image: url("../img/catalog/belgium.png");
+}
+
+.tab {
+  display: none;
+}
+
+.tab--active {
+  display: block;
+}
+
+.tab__default {
+  padding: 100px;
+  text-align: center;
+}
+
+.tab__description {
+  max-width: 1080px;
+  margin: 0;
+  margin-bottom: 38px;
+  line-height: 32px;
+}
+
+.tab__wrapper {
+  justify-content: space-between;
+}
+
+.tab__left {
+  width: 47%;
+}
+
+.tab__article {
+  display: none;
+}
+
+.tab__article--active {
+  display: block;
+}
+
+.tab__img {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.tab__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tab__data {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #999999;
+  font-size: 12px;
+}
+
+.tab__info {
+  margin: 0;
+  line-height: 32px;
+}
+
+.tab__img-default {
+  padding-top: 340px;
+  padding-bottom: 98px;
+  margin-bottom: 20px;
+  background-color: #ececec;
+  background-image: url("../img/catalog/artist1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.tab__img-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--gray-color);
+}
+
+.tab__title-default {
+  margin-bottom: 15px;
+}
+
+.tab__link-default {
+  display: inline-block;
+  margin-top: 15px;
+  line-height: 22px;
+  outline: none;
+  color: var(--active-text-color);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: color linear 0.3s, border-bottom-color linear 0.3s;
+}
+
+.tab__link-default:hover:not(:focus-visible) {
+  border-bottom-color: var(--active-text-color);
+}
+
+.tab__link-default:active:not(:focus-visible) {
+  color: var(--focus-bg-color);
+  border-bottom-color: transparent;
+}
+
+.tab__link-default:focus-visible {
+  color: var(--light-text-color);
+}
+
+.tab__right {
+  width: 50%;
+}
+
+.accordion:not(:first-child) {
+  margin-top: -1px;
+}
+
+.accordion__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+  text-align: start;
+
+  border-top: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
+
+  color: var(--main-text-color);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.accordion--active .accordion__btn {
+  border-bottom: 1px solid #cacaca;
+  border-color: var(--active-text-color);
+}
+
+.accordion__btn:hover:not(:focus-visible) {
+  border-color: var(--active-text-color);
+  z-index: 3;
+}
+
+.accordion__btn:active:not(:focus-visible) {
+  border-color: var(--focus-bg-color);
+  z-index: 3;
+}
+
+.accordion__btn .bg-focus {
+  pointer-events: none;
+}
+
+.accordion__btn .bg-focus::before {
+  background-color: var(--active-text-color);
+}
+
+.accordion__btn:focus-visible .bg-focus::before {
+  opacity: 1;
+}
+
+.accordion__btn:hover:not(:focus-visible) .bg-focus {
+  color: var(--active-text-color);
+}
+
+.accordion__btn:active:not(:focus-visible) .bg-focus {
+  color: var(--focus-bg-color);
+}
+
+.accordion__btn::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: #ececec;
+  background-image: url("../img/catalog/arrow-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.accordion__btn:focus-visible::after,
+.accordion__btn:hover:not(:focus-visible)::after {
+  background-color: #d1a9f0;
+}
+
+.accordion__btn:active:not(:focus-visible)::after {
+  background-color: #d1a9f0;
+  border-color: var(--active-text-color);
+}
+
+.accordion--active .accordion__btn {
+  color: var(--focus-bg-color);
+}
+
+.accordion--active .accordion__btn::after {
+  background-color: #d1a9f0;
+  border-color: var(--active-text-color);
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  will-change: max-height;
+  transition: all 0.3s ease-out;
+  box-sizing: content-box;
+}
+
+.accordion--active .accordion__content {
+  opacity: 1;
+  padding-top: 26px;
+  padding-bottom: 24px;
+}
+
+.accordion__list {
+  width: 91.2%;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.accordion__content-btn {
+  line-height: 31px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.accordion__content-btn:hover:not(:focus-visible) {
+  color: var(--active-text-color);
+  border-color: var(--active-text-color);
+}
+
+.accordion__content-btn:active:not(:focus-visible) {
+  color: var(--focus-bg-color);
+  border-color: transparent;
+}
+
+.accordion__content-btn:focus-visible {
+  color: var(--light-text-color);
+}
+
+.accordion__content-btn--active {
+  color: var(--focus-bg-color);
+}
+
+.default {
+  align-items: center;
+}
+
+.default__left {
+  width: 30%;
+  height: 160px;
+  position: relative;
+  border: 2px solid grey;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.default__left::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: grey;
+}
+
+.default__right {
+}
+
+.default__title {
+  margin-bottom: 5px;
+}
+
+.default__description {
+  margin: 0;
+  margin-bottom: 5px;
+  width: 275px;
+}
+
+.default__link {
+  display: inline-block;
+  outline: none;
+  color: var(--active-text-color);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: color linear 0.3s, border-bottom-color linear 0.3s;
+}
+
+.default__link:hover:not(:focus-visible) {
+  border-bottom-color: var(--active-text-color);
+}
+
+.default__link:active:not(:focus-visible) {
+  color: var(--focus-bg-color);
+  border-bottom-color: transparent;
+}
+
+.default__link:focus-visible {
+  color: var(--light-text-color);
+}
