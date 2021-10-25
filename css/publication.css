@@ -1,0 +1,305 @@
+.publication {
+  padding-top: 80px;
+  padding-bottom: 73px;
+  background-image: url("../img/publication/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--main-bg-color);
+}
+
+.publication__left {
+  width: 28%;
+}
+
+.publicaation__title {
+  margin-bottom: 20px;
+}
+
+.publication__category-title {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.publication__category-open {
+  display: none;
+}
+
+.checkbox {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.checkbox__item {
+  line-height: 32px;
+}
+
+.checkbox__label {
+  display: flex;
+  width: fit-content;
+
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox__check {
+  margin-right: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 12px;
+  height: 12px;
+
+  border: 1px solid var(--main-bg-color);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.checkbox__check::before {
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  background-color: var(--hover-text-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.checkbox__text {
+  transition: color 0.3s ease-in-out;
+}
+
+.checkbox__consent:checked + .checkbox__check {
+  border-color: var(--hover-text-color);
+}
+
+.checkbox__consent:checked + .checkbox__check::before {
+  opacity: 1;
+}
+
+.checkbox__consent:checked ~ .checkbox__text {
+  color: var(--hover-text-color);
+}
+
+.checkbox__label:hover:not(:focus-visible) .checkbox__check,
+.checkbox__consent:focus-visible + .checkbox__check {
+  border-color: var(--hover-text-color);
+}
+
+.checkbox__label:hover:not(:focus-visible) .checkbox__text,
+.checkbox__consent:focus-visible ~ .checkbox__text {
+  color: var(--hover-text-color);
+}
+
+.publication__price-title {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.publication__filter-price {
+  width: 277px;
+  margin: 0;
+  padding-left: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  line-height: 32px;
+}
+
+.publication__filter-price input {
+  width: 73px;
+  height: 38px;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding-left: 10px;
+
+  color: var(--main-bg-color);
+  background-color: rgba(157, 92, 208, 0.5);
+  border: 1px solid transparent;
+  outline: none;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.publication__filter-price input:focus-visible {
+  background-color: rgba(157, 92, 208, 1);
+  border-color: var(--main-bg-color);
+}
+
+.publication__filter-price input:hover:not(:focus-visible) {
+  background-color: rgba(157, 92, 208, 1);
+}
+
+.publication__right {
+  width: 72%;
+}
+
+.swiper--publication {
+  padding-top: 93px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  margin-left: -3px;
+}
+
+.swiper-pagination--publication {
+  bottom: unset;
+  top: 38px;
+  padding-left: 53px;
+  text-align: start;
+}
+
+.swiper-button-prev--publication,
+.swiper-button-next--publication {
+  top: 55px;
+  left: 3px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ececec;
+  background-color: #ececec;
+  border-radius: 50%;
+  opacity: 1;
+  outline: none;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.swiper-button-prev--publication path,
+.swiper-button-next--publication path {
+  stroke: var(--dark-bg-color);
+}
+
+.swiper-button-prev--publication:hover:not(:focus-visible),
+.swiper-button-next--publication:hover:not(:focus-visible) {
+  background-color: #d1a9f0;
+  border-color: #d1a9f0;
+}
+
+.swiper-button-prev--publication:active:not(:focus-visible),
+.swiper-button-next--publication:active:not(:focus-visible) {
+  background-color: #d1a9f0;
+  border-color: var(--active-text-color);
+}
+
+.swiper-button-prev--publication:focus-visible,
+.swiper-button-next--publication:focus-visible {
+  border-color: var(--active-text-color);
+}
+
+.swiper-button-next--publication.swiper-button-disabled path,
+.swiper-button-prev--publication.swiper-button-disabled path {
+  stroke: #bbbbbb;
+}
+
+.swiper-button-next--publication.swiper-button-disabled,
+.swiper-button-prev--publication.swiper-button-disabled {
+  opacity: 1;
+}
+
+.swiper-button-prev--publication:after,
+.swiper-button-next--publication:after {
+  content: "";
+}
+
+.swiper-button-next--publication {
+  left: 105px;
+}
+
+.swiper-slide--publication {
+  width: 350px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.swiper__figure--publication {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.swiper__img--publication {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.publication__figcaption {
+  justify-content: space-between;
+  margin-top: 23px;
+}
+
+.publication__wrapper {
+  width: 60%;
+}
+
+.publication__name {
+  margin: 0;
+  font-size: 16px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.publication__author {
+  margin: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.publication__price {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  width: 30%;
+
+  font-style: italic;
+}
+
+.publication__btn {
+  width: 120px;
+  padding: 9px;
+  position: relative;
+
+  color: var(--main-bg-color);
+  font-weight: 700;
+  border: 2px solid var(--active-text-color);
+  border-radius: 100px;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.publication__btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+
+  opacity: 0;
+  border: 2px solid var(--hover-text-color);
+  border-radius: 100px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.publication__btn:focus-visible::before {
+  opacity: 1;
+}
+
+.publication__btn:hover:not(:focus-visible) {
+  background-color: var(--active-text-color);
+}
+
+.publication__btn:active:not(:focus-visible) {
+  background-color: var(--focus-bg-color);
+  border-color: #d1a9f0;
+}

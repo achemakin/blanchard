@@ -1,5 +1,5 @@
 .catalog {
-  padding-top: 80px;
+  padding-top: 78px;
 }
 
 .catalog__heading {
@@ -23,6 +23,7 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
   transition: filter 0.4s ease-in-out;
 }
 
@@ -104,7 +105,7 @@
 .tab__description {
   max-width: 1080px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   line-height: 32px;
 }
 
@@ -220,10 +221,10 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
+  transition: border-color 0.4s ease-in-out;
 }
 
 .accordion--active .accordion__btn {
-  border-bottom: 1px solid #cacaca;
   border-color: var(--active-text-color);
 }
 
@@ -291,6 +292,7 @@
 }
 
 .accordion__content {
+  display: none;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -301,6 +303,7 @@
 }
 
 .accordion--active .accordion__content {
+  display: block;
   opacity: 1;
   padding-top: 26px;
   padding-bottom: 24px;

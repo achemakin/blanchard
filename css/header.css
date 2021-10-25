@@ -208,6 +208,7 @@
 }
 
 .menu__btn svg {
+  margin-bottom: -5px;
   pointer-events: none;
   transition: transform ease-in-out 0.4s;
 }
@@ -240,7 +241,7 @@
   padding-bottom: 40px;
   width: 300px;
   height: 300px;
-  top: 44px;
+  top: 45px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -303,7 +304,8 @@
 }
 
 .search__btn {
-  margin-right: 10px;
+  margin-top: 2px;
+  margin-right: 8px;
   flex-shrink: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -326,12 +328,13 @@
 .search__input {
   flex-grow: 1;
   border: none;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   background-color: transparent;
   color: var(--light-text-color);
 
   border-bottom: 1px solid var(--light-text-color);
   outline: none;
+  transition: border-bottom-color 0.4s ease-in-out;
 }
 
 .search__input:hover,

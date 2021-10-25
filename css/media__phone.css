@@ -45,7 +45,8 @@
   /* Hero */
 
   .hero {
-    padding-top: 241px;
+    margin-top: -102px;
+    padding-top: 213px;
   }
 
   .hero__title {
@@ -177,19 +178,26 @@
 
   .events {
     padding-top: 69px;
+    padding-bottom: 78px;
   }
 
   .events__slide-title {
     padding-right: 5px;
+    margin-bottom: 3px;
   }
 
   .events__swiper-slide {
     width: 47.4%;
     margin-bottom: 34px;
+    min-height: 684px;
   }
 
-  .events__swiper-slide:nth-child(3) {
+  .events__swiper-slide:nth-child(n + 3) {
     display: none;
+  }
+
+  .all-slides .events__swiper-slide {
+    display: flex;
   }
 
   .events__swiper-slide:not(:nth-child(3n)) {
@@ -200,8 +208,110 @@
     margin-right: 5%;
   }
 
+  .events__swiper-figcaption {
+    padding-top: 15px;
+    padding-right: 16px;
+  }
+
   .events__all {
     margin-top: 17px;
+  }
+
+  /* Publication */
+  .publication {
+    padding-top: 84px;
+    padding-bottom: 76px;
+  }
+
+  .publication__container {
+    flex-direction: column;
+  }
+
+  .publication__left,
+  .publication__right {
+    width: 100%;
+  }
+
+  .publication__category-title {
+    margin-bottom: 5px;
+  }
+
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 160px;
+  }
+
+  .checkbox__item {
+    width: 183px;
+    line-height: 32px;
+  }
+
+  .checkbox__item:nth-child(n + 6) {
+    margin-left: 45px;
+  }
+
+  .checkbox__item:nth-child(n + 10) {
+    margin-left: 75px;
+  }
+
+  .checkbox__item:nth-child(7) .checkbox__check {
+    margin-bottom: 32px;
+  }
+
+  .checkbox__label {
+    width: auto;
+  }
+
+  .checkbox__text {
+    width: 87%;
+  }
+
+  .swiper--publication {
+    margin-left: 0;
+    padding-top: 110px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .swiper-pagination--publication {
+    top: 55px;
+    padding-left: 48px;
+  }
+
+  .swiper-button-prev--publication {
+    top: 72px;
+    left: 0px;
+  }
+
+  .swiper-button-next--publication {
+    left: 100px;
+    top: 72px;
+  }
+
+  /* Projects */
+
+  .projects__description {
+    width: 99%;
+    margin-bottom: 24px;
+  }
+
+  .projects__description a {
+    display: block;
+  }
+
+  .projects__partners {
+    margin-bottom: 29px;
+  }
+
+  .swiper--projects {
+    width: 84%;
+  }
+
+  .swiper-slide--projects {
+    width: 264px;
+    height: 106px;
   }
 
   /* Modals */

@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="./libs/swiper/swiper.css">
   <script defer src="./libs/swiper/swiper.js"></script>
 
+  <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/styles.css">
@@ -33,6 +36,8 @@
   <link rel="stylesheet" href="./css/gallery.css">
   <link rel="stylesheet" href="./css/catalog.css">
   <link rel="stylesheet" href="./css/events.css">
+  <link rel="stylesheet" href="./css/publication.css">
+  <link rel="stylesheet" href="./css/projects.css">
 
   <link rel="stylesheet" href="./css/media-tablet.css">
   <link rel="stylesheet" href="./css/media__phone.css">
@@ -72,11 +77,11 @@
             </li>
 
             <li class="header__item">
-              <a href="/" class="bg-focus header__link">Издания</a>
+              <a href="#publication" class="bg-focus header__link">Издания</a>
             </li>
 
             <li class="header__item">
-              <a href="/" class="bg-focus header__link">Проекты</a>
+              <a href="#projects" class="bg-focus header__link">Проекты</a>
             </li>
 
             <li class="header__item">
@@ -419,8 +424,8 @@
                   </li>
 
                   <li class="submenu__item">
-                    <img class="submenu__img" src="./img/header/menu_img_51.jpg" alt="Фрагмент картины Карра loading="
-                      lazy">
+                    <img class="submenu__img" src="./img/header/menu_img_51.jpg" alt="Фрагмент картины Карра"
+                      loading="lazy">
 
                     <a class="submenu__link" href="#">Карра</a>
                   </li>
@@ -833,8 +838,6 @@
                     alt="Портрет Доменико Гирландайо" loading="lazy">
                 </picture>
 
-
-
                 <h3 class="title tab__title">Доменико Гирландайо</h3>
 
                 <p class="tab__data">2 июня 1448 — 11 января 1494</p>
@@ -1050,7 +1053,7 @@
                       <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
                         себя</p>
 
-                      <a href="#gallery" class="default__link">В галерею</a>
+                      <a href="#gallery" class="bg-focus default__link">В галерею</a>
                     </div>
                   </div>
                 </div>
@@ -1071,7 +1074,7 @@
                       <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
                         себя</p>
 
-                      <a href="#gallery" class="default__link">В галерею</a>
+                      <a href="#gallery" class="bg-focus default__link">В галерею</a>
                     </div>
                   </div>
                 </div>
@@ -1092,7 +1095,7 @@
                       <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
                         себя</p>
 
-                      <a href="#gallery" class="default__link">В галерею</a>
+                      <a href="#gallery" class="bg-focus default__link">В галерею</a>
                     </div>
                   </div>
                 </div>
@@ -1113,7 +1116,7 @@
                       <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
                         себя</p>
 
-                      <a href="#gallery" class="default__link">В галерею</a>
+                      <a href="#gallery" class="bg-focus default__link">В галерею</a>
                     </div>
                   </div>
                 </div>
@@ -1134,7 +1137,7 @@
                       <p class="default__description">А в галерее вы всегда можете найти что-то интересное для
                         себя</p>
 
-                      <a href="#gallery" class="default__link">В галерею</a>
+                      <a href="#gallery" class="bg-focus default__link">В галерею</a>
                     </div>
                   </div>
                 </div>
@@ -1468,19 +1471,23 @@
           <!-- Additional required wrapper -->
           <ul class="swiper-wrapper list events__swiper-wrapper">
             <!-- Slides -->
-            <li class="swiper-slide events__swiper-slide js-events-slide">
-              <picture>
-                <source type="image/webp" srcset="./img/events/event_1.webp 1x, ./img/events/event_1_2x.webp 2x">
+            <li class="swiper-slide events__swiper-slide">
+              <figure class="events__figure">
+                <picture>
+                  <source type="image/webp" srcset="./img/events/event_1.webp 1x, ./img/events/event_1_2x.webp 2x">
 
-                <img class="events__swiper-img" src="./img/events/event_1.jpg" srcset="./img/events/event_1_2x.jpg 2x"
-                  alt="Книжная гравюра в живом восприятии" loading="lazy">
-              </picture>
+                  <img class="events__swiper-img" src="./img/events/event_1.jpg" srcset="./img/events/event_1_2x.jpg 2x"
+                    alt="Книжная гравюра в живом восприятии" loading="lazy">
+                </picture>
+
+                <figcaption class="events__swiper-figcaption">
+                  <p class="events__info">Музей им. Щусева</p>
+
+                  <p class="events__data">с 20 марта по 30 апреля</p>
+                </figcaption>
+              </figure>
 
               <div class="events__wrapper">
-                <p class="events__info">Музей им. Щусева</p>
-
-                <p class="events__data">с 20 марта по 30 апреля</p>
-
                 <h3 class="title events__slide-title">Книжная гравюра в живом восприятии</h3>
 
                 <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель
@@ -1490,19 +1497,24 @@
               </div>
             </li>
 
-            <li class="swiper-slide events__swiper-slide js-events-slide">
-              <picture>
-                <source type="image/webp" srcset="./img/events/event_2.webp 1x, ./img/events/event_2_2x.webp 2x">
+            <li class="swiper-slide events__swiper-slide">
+              <figure class="events__figure">
+                <picture>
+                  <source type="image/webp" srcset="./img/events/event_2.webp 1x, ./img/events/event_2_2x.webp 2x">
 
-                <img class="events__swiper-img" src="./img/events/event_2.jpg" srcset="./img/events/event_2_2x.jpg 2x"
-                  alt="Октрытая дискуссия. Дмитрий Петров и Сергей Ильин." loading="lazy">
-              </picture>
+                  <img class="events__swiper-img" src="./img/events/event_2.jpg" srcset="./img/events/event_2_2x.jpg 2x"
+                    alt="Октрытая дискуссия. Дмитрий Петров и Сергей Ильин." loading="lazy">
+                </picture>
+
+                <figcaption class="events__swiper-figcaption">
+                  <p class="events__info">MMOMA</p>
+
+                  <p class="events__data">с 20 марта 19:00</p>
+                </figcaption>
+              </figure>
+
 
               <div class="events__wrapper">
-                <p class="events__info">MMOMA</p>
-
-                <p class="events__data">с 20 марта 19:00</p>
-
                 <h3 class="title events__slide-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
 
                 <p class="events__description">Высокий уровень вовлечения представителей целевой аудитории является
@@ -1512,19 +1524,24 @@
               </div>
             </li>
 
-            <li class="swiper-slide events__swiper-slide js-events-slide">
-              <picture>
-                <source type="image/webp" srcset="./img/events/event_3.webp 1x, ./img/events/event_3_2x.webp 2x">
+            <li class="swiper-slide events__swiper-slide">
+              <figure class="events__figure">
+                <picture>
+                  <source type="image/webp" srcset="./img/events/event_3.webp 1x, ./img/events/event_3_2x.webp 2x">
 
-                <img class="events__swiper-img" src="./img/events/event_3.jpg" srcset="./img/events/event_3_2x.jpg 2x"
-                  alt="Выставка Формация 2020" loading="lazy">
-              </picture>
+                  <img class="events__swiper-img" src="./img/events/event_3.jpg" srcset="./img/events/event_3_2x.jpg 2x"
+                    alt="Выставка Формация 2020" loading="lazy">
+                </picture>
+
+                <figcaption class="events__swiper-figcaption">
+                  <p class="events__info">Еврейский музей</p>
+
+                  <p class="events__data">с 31 марта по 21 апреля</p>
+                </figcaption>
+              </figure>
+
 
               <div class="events__wrapper">
-                <p class="events__info">Еврейский музей</p>
-
-                <p class="events__data">с 31 марта по 21 апреля</p>
-
                 <h3 class="title events__slide-title">Выставка «Формация 2020»</h3>
 
                 <p class="events__description">Идейные соображения высшего порядка, а также современная методология
@@ -1534,19 +1551,24 @@
               </div>
             </li>
 
-            <li class="swiper-slide events__swiper-slide js-events-slide">
-              <picture>
-                <source type="image/webp" srcset="./img/events/event_4.webp 1x, ./img/events/event_4_2x.webp 2x">
+            <li class="swiper-slide events__swiper-slide">
+              <figure class="events__figure">
+                <picture>
+                  <source type="image/webp" srcset="./img/events/event_4.webp 1x, ./img/events/event_4_2x.webp 2x">
 
-                <img class="events__swiper-img" src="./img/events/event_4.jpg" srcset="./img/events/event_4_2x.jpg 2x"
-                  alt="XXIV Международная биеннале молодого искусства" loading="lazy">
-              </picture>
+                  <img class="events__swiper-img" src="./img/events/event_4.jpg" srcset="./img/events/event_4_2x.jpg 2x"
+                    alt="XXIV Международная биеннале молодого искусства" loading="lazy">
+                </picture>
+
+                <figcaption class="events__swiper-figcaption">
+                  <p class="events__info">Третьяковка на Крымском валу</p>
+
+                  <p class="events__data">с 30 марта по 30 апреля</p>
+                </figcaption>
+              </figure>
+
 
               <div class="events__wrapper">
-                <p class="events__info">Третьяковка на Крымском валу</p>
-
-                <p class="events__data">с 30 марта по 30 апреля</p>
-
                 <h3 class="title events__slide-title">XXIV Международная биеннале молодого искусства</h3>
 
                 <p class="events__description">Внезапно, реплицированные с зарубежных источников, современные
@@ -1556,19 +1578,23 @@
               </div>
             </li>
 
-            <li class="swiper-slide events__swiper-slide js-events-slide">
-              <picture>
-                <source type="image/webp" srcset="./img/events/event_5.webp 1x, ./img/events/event_5_2x.webp 2x">
+            <li class="swiper-slide events__swiper-slide">
+              <figure class="events__figure">
+                <picture>
+                  <source type="image/webp" srcset="./img/events/event_5.webp 1x, ./img/events/event_5_2x.webp 2x">
 
-                <img class="events__swiper-img" src="./img/events/event_5.jpg" srcset="./img/events/event_5_2x.jpg 2x"
-                  alt="Джон Винзор. Фотографии из серии Метафора серебра" loading="lazy">
-              </picture>
+                  <img class="events__swiper-img" src="./img/events/event_5.jpg" srcset="./img/events/event_5_2x.jpg 2x"
+                    alt="Джон Винзор. Фотографии из серии Метафора серебра" loading="lazy">
+                </picture>
+
+                <figcaption class="events__swiper-figcaption">
+                  <p class="events__info">ММАМ</p>
+
+                  <p class="events__data">с 8 апреля по 20 мая</p>
+                </figcaption>
+              </figure>
 
               <div class="events__wrapper">
-                <p class="events__info">ММАМ</p>
-
-                <p class="events__data">с 8 апреля по 20 мая</p>
-
                 <h3 class="title events__slide-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
 
                 <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель
@@ -1583,6 +1609,482 @@
         </div>
 
         <button class="btn events__all js-events-all" type="button">Все события</button>
+      </div>
+    </section>
+
+    <section class="publication" id="publication">
+      <div class="container flex publication__container">
+        <div class="publication__left js-publication-left">
+          <h2 class="title publicaation__title">Издания</h2>
+
+          <h3 class="title publication__category-title">Категории</h3>
+          <button class="btn publication__category-open js-category-open" type="button">Категории</button>
+
+          <ul class="publication__checkbox checkbox">
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="hit">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Бестселлеры</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="art">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Искусство</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="architecture">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Архитектура</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item is-checked">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="design" checked>
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Дизайн</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="fashion">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Мода</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="children">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Детям</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="fiction">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Художественная литература</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="publicism">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Публицистика</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="guades">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Путеводители</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="philosophy">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Философия</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="educational literature">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Учебная литература</span>
+              </label>
+            </li>
+
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__consent js-category-checkbox" type="checkbox" name="filter"
+                  value="magazines">
+                <span class="checkbox__check"></span>
+                <span class="checkbox__text">Журналы и газеты</span>
+              </label>
+            </li>
+          </ul>
+
+          <h3 class="title publication__price-title">Цена</h3>
+
+          <p class="publication__filter-price">
+            От <input type="text" name="price-from" value="50"> до <input type="text" name="price-to" value="25 000">
+            руб.
+          </p>
+        </div>
+
+        <div class="publication__right">
+          <div class="swiper swiper--publication js-publication-swiper">
+            <div class="swiper-pagination swiper-pagination--publication "></div>
+
+            <div class="swiper-button-prev swiper-button-prev--publication">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L0.999995 6L6 0.999998" stroke="white" />
+              </svg>
+            </div>
+
+            <div class="swiper-button-next swiper-button-next--publication">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11L6.00001 6L1 0.999997" stroke="white" />
+              </svg>
+            </div>
+
+            <ul class="swiper-wrapper list swiper-wrapper--publication">
+              <!-- Slides -->
+              <li class="swiper-slide swiper-slide--publication">
+                <figure class="swiper__figure--publication">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/publication/publication1.webp 1x, ./img/publication/publication1_2x.webp 2x">
+
+                    <img class="swiper__img--publication" src="./img/publication/publication1.jpg"
+                      srcset="./img/publication/publication1_2x.jpg 2x" alt="Обложка Искусство цвета" loading="lazy">
+                  </picture>
+
+                  <figcaption class="flex publication__figcaption">
+                    <div class="publication__wrapper">
+                      <h3 class="publication__name">Искусство цвета</h3>
+
+                      <p class="publication__author">Иттен, Иоханнес</p>
+                    </div>
+
+                    <p class="publication__price">620 руб</p>
+                  </figcaption>
+                </figure>
+
+                <button class="btn publication__btn" type="button">Заказать</button>
+              </li>
+
+              <li class="swiper-slide swiper-slide--publication">
+                <figure class="swiper__figure--publication">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/publication/publication2.webp 1x, ./img/publication/publication2_2x.webp 2x">
+
+                    <img class="swiper__img--publication" src="./img/publication/publication2.jpg"
+                      srcset="./img/publication/publication2_2x.jpg 2x" alt="Обложка Типографика" loading="lazy">
+                  </picture>
+
+                  <figcaption class="flex publication__figcaption">
+                    <div class="publication__wrapper">
+                      <h3 class="publication__name">Типографика</h3>
+
+                      <p class="publication__author">Рудер, Эмиль</p>
+                    </div>
+
+                    <p class="publication__price">2 450 руб</p>
+                  </figcaption>
+                </figure>
+
+                <button class="btn publication__btn" type="button">Заказать</button>
+              </li>
+
+              <li class="swiper-slide swiper-slide--publication">
+                <figure class="swiper__figure--publication">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/publication/publication3.webp 1x, ./img/publication/publication3_2x.webp 2x">
+
+                    <img class="swiper__img--publication" src="./img/publication/publication3.jpg"
+                      srcset="./img/publication/publication3_2x.jpg 2x" alt="Обложка Книга про буквы" loading="lazy">
+                  </picture>
+
+                  <figcaption class="flex publication__figcaption">
+                    <div class="publication__wrapper">
+                      <h3 class="publication__name">Книга про буквы</h3>
+
+                      <p class="publication__author">Гордон, Юрий</p>
+                    </div>
+
+                    <p class="publication__price">2 200 руб</p>
+                  </figcaption>
+                </figure>
+
+                <button class="btn publication__btn" type="button">Заказать</button>
+              </li>
+
+              <li class="swiper-slide swiper-slide--publication">
+                <figure class="swiper__figure--publication">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/publication/publication4.webp 1x, ./img/publication/publication4_2x.webp 2x">
+
+                    <img class="swiper__img--publication" src="./img/publication/publication4.jpg"
+                      srcset="./img/publication/publication4_2x.jpg 2x" alt="Обложка Николай Ильин" loading="lazy">
+                  </picture>
+
+                  <figcaption class="flex publication__figcaption">
+                    <div class="publication__wrapper">
+                      <h3 class="publication__name">Николай Ильин</h3>
+
+                      <p class="publication__author">Кричевский, Владимир</p>
+                    </div>
+
+                    <p class="publication__price">1 100 руб</p>
+                  </figcaption>
+                </figure>
+
+                <button class="btn publication__btn" type="button">Заказать</button>
+              </li>
+
+              <li class="swiper-slide swiper-slide--publication">
+                <figure class="swiper__figure--publication">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/publication/publication5.webp 1x, ./img/publication/publication5_2x.webp 2x">
+
+                    <img class="swiper__img--publication" src="./img/publication/publication5.jpg"
+                      srcset="./img/publication/publication5_2x.jpg 2x"
+                      alt="Обложка Модульные сетки в графическом дизайне" loading="lazy">
+                  </picture>
+
+                  <figcaption class="flex publication__figcaption">
+                    <div class="publication__wrapper">
+                      <h3 class="publication__name">Модульные сетки в графическом дизайне</h3>
+
+                      <p class="publication__author">Мюллер-Брокманн, Йозеф</p>
+                    </div>
+
+                    <p class="publication__price">1 450 руб</p>
+                  </figcaption>
+                </figure>
+
+                <button class="btn publication__btn" type="button">Заказать</button>
+              </li>
+
+              <li class="swiper-slide swiper-slide--publication">
+                <figure class="swiper__figure--publication">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/publication/publication6.webp 1x, ./img/publication/publication6_2x.webp 2x">
+
+                    <img class="swiper__img--publication" src="./img/publication/publication6.jpg"
+                      srcset="./img/publication/publication6_2x.jpg 2x" alt="Книжная гравюра в живом восприятии"
+                      loading="lazy">
+                  </picture>
+
+                  <figcaption class="flex publication__figcaption">
+                    <div class="publication__wrapper">
+                      <h3 class="publication__name">Эволюция графических стилей</h3>
+
+                      <p class="publication__author">Хеллер, Чваст</p>
+                    </div>
+
+                    <p class="publication__price">3 200 руб</p>
+                  </figcaption>
+                </figure>
+
+                <button class="btn publication__btn" type="button">Заказать</button>
+              </li>
+
+              <li class="swiper-slide swiper-slide--publication">
+                <figure class="swiper__figure--publication">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/publication/publication7.webp 1x, ./img/publication/publication7_2x.webp 2x">
+
+                    <img class="swiper__img--publication" src="./img/publication/publication7.jpg"
+                      srcset="./img/publication/publication7_2x.jpg 2x" alt="Обложкка Искусство и визуальное восприятие"
+                      loading="lazy">
+                  </picture>
+
+                  <figcaption class="flex publication__figcaption">
+                    <div class="publication__wrapper">
+                      <h3 class="publication__name">Искусство и визуальное восприятие</h3>
+
+                      <p class="publication__author">Арнхейм, Рудольф</p>
+                    </div>
+
+                    <p class="publication__price">2 200 руб</p>
+                  </figcaption>
+                </figure>
+
+                <button class="btn publication__btn" type="button">Заказать</button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="container projects__container">
+        <h2 class="title projects__title">Проекты</h2>
+
+        <p class="projects__description">
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
+          фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
+          уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+          Прежде всего, постоянное информационно-пропагандистское
+          <button data-tippy-content="Пример современных тенденций - современная методология разработки">i</button>
+          обеспечение нашей деятельности однозначно фиксирует
+          необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
+          оппозиции могут быть рассмотрены
+          <button
+            data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">i
+          </button>
+          исключительно в разрезе маркетинговых и финансовых
+          <button data-tippy-content="В стремлении повысить качество">i</button>
+          предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
+          призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
+          степени совершенной неузнаваемости. Подробнее:
+          <a href="http://blanchard-art.ru/projects/about">blanchard-art.ru/projects/about</a>
+        </p>
+
+        <h3 class="projects__partners">Партнёры проектов:</h3>
+
+        <div class="project__wrapper">
+          <button class="btn button-prev--projects" type="button">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 11L0.999995 6L6 0.999998" stroke="black" />
+            </svg>
+          </button>
+
+          <div class="swiper swiper--projects js-swiper-projects">
+            <ul class="swiper-wrapper list swiper-wrapper--projects">
+              <!-- Slides -->
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project1.webp 1x, /img/projects/project1_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project1.png"
+                      srcset="./img/projects/project1_2x.png 2x" alt="Freelands Foundation" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project2.webp 1x, /img/projects/project2_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project2.png"
+                      srcset="./img/projects/project2_2x.png 2x" alt="Inmstitute for Contemporary Art" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project3.webp 1x, /img/projects/project3_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project3.png"
+                      srcset="./img/projects/project3_2x.png 2x" alt="Workhouse" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project4.webp 1x, /img/projects/project4_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project4.png"
+                      srcset="./img/projects/project4_2x.png 2x" alt="1849" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project5.webp 1x, /img/projects/project5_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project5.png"
+                      srcset="./img/projects/project5_2x.png 2x" alt="Xiscox" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project6.webp 1x, /img/projects/project6_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project6.png"
+                      srcset="./img/projects/project6_2x.png 2x" alt="Stassen" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project7.webp 1x, /img/projects/project7_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project7.png"
+                      srcset="./img/projects/project7_2x.png 2x" alt="Watts" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project8.webp 1x, /img/projects/project8_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project8.png"
+                      srcset="./img/projects/project8_2x.png 2x" alt="Camden" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="swiper-slide swiper-slide--projects">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/projects/project9.webp 1x, /img/projects/project9_2x.webp 2x">
+
+                    <img class="swiper__img--projects" src="./img/projects/project9.png"
+                      srcset="./img/projects/project9_2x.png 2x" alt="ESAD" loading="lazy">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="btn button-next--projects" type="button">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 11L6.00001 6L1 0.999997" stroke="black" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   </main>

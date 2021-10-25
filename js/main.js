@@ -17,6 +17,7 @@ const accordionsEl = document.querySelectorAll('.js-accordion');
 if (accordionsEl) {
   accordionsEl.forEach(el => {
     if (el.classList.contains('accordion--active')) {
+      el.lastElementChild.style.display = 'block';
       el.lastElementChild.style.maxHeight = el.lastElementChild.scrollHeight + 'px';
     }
   });
@@ -28,8 +29,9 @@ const tabArticleEl = document.querySelectorAll('.js-tab-article');
 const tabsBtnEl = document.querySelectorAll('.js-tabs-btn');
 const catalogTabEl = document.querySelectorAll('.js-catalog-tab');
 
-// Для открытие всех карточек при нажатии на кнопку все события
-const eventsSlideEl = document.querySelectorAll('.js-events-slide');
+// Работа Категории
+const categoryOpenBtn = document.querySelector('.js-category-open');
+const publicationLeftEl = document.querySelector('.js-publication-left');
 
 // Открытие модального окна
 function openModals(modalId) {
@@ -140,10 +142,15 @@ document.addEventListener('click', event => {
           el.lastElementChild.style.maxHeight = null;
           el.firstElementChild.setAttribute('aria-expanded', 'false');
           el.lastElementChild.setAttribute('aria-hidden', 'true');
+
+          setTimeout(() => {
+            el.lastElementChild.style.display = 'none';
+          }, 400)
         }
       })
 
       if (!isActiveAccordion) {
+        target.nextElementSibling.style.display = 'block';
         target.parentElement.classList.add('accordion--active');
         target.nextElementSibling.style.maxHeight = target.nextElementSibling.scrollHeight + 'px';
         target.setAttribute('aria-expanded', 'true');
@@ -199,14 +206,21 @@ document.addEventListener('click', event => {
     // Нажатие кнопки Все события
     const isBtnAll = target.classList.contains('js-events-all');
     if (isBtnAll) {
-      eventsSlideEl.forEach(el => {
-        if (getComputedStyle(el).display === 'none') {
-          el.style.display = 'flex';
-        }
-      })
-
+      target.parentElement.classList.add('all-slides');
       target.style.display = 'none';
     }
+
+    // Нажатие кнопки открыть/закрыть категории
+    const isCategoryOpenBtn = target.classList.contains('js-category-open');
+    const isCategoryCheckbox = target.classList.contains('js-category-checkbox');
+    if (isCategoryOpenBtn) {
+      publicationLeftEl.classList.toggle('publication__checkbox--open');
+    }
+
+    if (isCategoryCheckbox) {
+      target.parentElement.parentElement.classList.toggle('is-checked');
+    }
+
 });
 
 // Закрытие меню при скролле
@@ -284,6 +298,7 @@ let eventsSwiper = new Swiper('.js-events-swiper', {
   spaceBetween: 27,
   pagination: {
     el: '.events__swiper-pagination',
+    clickable: true,
   },
 });
 
@@ -291,10 +306,115 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   eventsSwiper.destroy();
 }
 
+// Publication-swiper
+let publicationSwiper = new Swiper('.js-publication-swiper', {
+  speed: 500,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 50,
+  pagination: {
+    el: '.swiper-pagination--publication',
+    type: 'fraction',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next--publication',
+    prevEl: '.swiper-button-prev--publication',
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+    },
+    992: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+    },
+    1400: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    }  
+  } 
+});
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+  publicationSwiper.destroy();
+}
+
+// js-swiper-projects
+
+const projectsSwiper = new Swiper('.js-swiper-projects', {
+  speed: 500,
+  loop: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+    },
+    992: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+    },
+    1400: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
+    }  
+  } 
+});
+
+document.querySelector('.button-prev--projects').addEventListener('click', () => projectsSwiper.slidePrev(500));
+document.querySelector('.button-next--projects').addEventListener('click', () => projectsSwiper.slideNext(500))
+
+
 window.addEventListener('resize', () => {
   if (window.matchMedia("(min-width: 768px)").matches && !eventsSwiper.destroyed) {
-      eventsSwiper.destroy();
-    }
+    eventsSwiper.destroy();      
+  };
+
+  if (window.matchMedia("(min-width: 768px)").matches && publicationSwiper.destroyed) {
+    publicationSwiper = new Swiper('.js-publication-swiper', {
+      speed: 500,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+      pagination: {
+        el: '.swiper-pagination--publication',
+        type: 'fraction',
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next--publication',
+        prevEl: '.swiper-button-prev--publication',
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 34,
+        },
+        992: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        },
+        1400: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        }  
+      } 
+    });
+  };
 
   if (window.matchMedia("(max-width: 767px)").matches && eventsSwiper.destroyed) {
     eventsSwiper = new Swiper('.js-events-swiper', {
@@ -302,9 +422,14 @@ window.addEventListener('resize', () => {
       spaceBetween: 27,
       pagination: {
         el: '.events__swiper-pagination',
+        clickable: true,
       },
     });
   }  
+
+  if (window.matchMedia("(max-width: 767px)").matches && !publicationSwiper.destroyed) {
+    publicationSwiper.destroy();
+  }
 });
 
 //Choices
@@ -339,4 +464,10 @@ window.addEventListener('resize', () => {
   } else {
     searchBtnEl.setAttribute('disabled', true);
   }
+});
+
+// Tippy.js
+tippy('[data-tippy-content]', {
+  trigger: "click",
+  // hideOnClick: 'toggle'
 });

@@ -16,7 +16,7 @@
 }
 
 .gallery__title {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   color: var(--light-text-color);
 }
 
@@ -135,7 +135,7 @@
 }
 
 .swiper--gallery {
-  padding-top: 84px;
+  padding-top: 85px;
 }
 
 .swiper-pagination--gallery {
