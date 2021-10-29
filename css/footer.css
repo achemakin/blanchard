@@ -1,0 +1,46 @@
+.footer {
+  padding-top: 47px;
+  padding-bottom: 47px;
+  background-color: var(--dark-bg-color);
+}
+
+.footer__container {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__img {
+  display: block;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer__link {
+  display: block;
+  width: 45px;
+  height: 45px;
+  outline: none;
+}
+
+.footer__link svg path {
+  transition: fill 0.4s ease-in-out;
+}
+
+.footer__link:hover svg path {
+  fill: var(--main-bg-color);
+}
+
+.footer__link:focus svg path {
+  fill: var(--main-bg-color);
+}
+
+.footer__link:active svg path {
+  fill: var(--focus-bg-color);
+}

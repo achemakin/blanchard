@@ -17,30 +17,29 @@
 .projects__description button {
   width: 16px;
   height: 16px;
+  padding: 0;
 
-  text-align: center;
+  position: relative;
+  transform: translateY(2px);
 
   border: none;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid var(--active-text-color);
-  /* background-color: var(--active-text-color); */
-  /* color: var(--main-bg-color); */
-  font-size: 12px;
-  font-weight: 600;
   cursor: pointer;
   outline: none;
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-.projects__description button:hover:not(:focus-visible),
-.projects__description button:focus-visible {
-  background-color: #d1a9f0;
+.projects__description button:hover:not(:focus-visible) svg,
+.projects__description button:focus-visible svg {
+  fill: #d1a9f0;
 }
 
-.projects__description button[aria-describedby] {
-  background-color: var(--active-text-color);
-  color: var(--main-bg-color);
+.projects__description button:active:not(:focus-visible) svg {
+  fill: #9d5cd0;
+}
+.projects__description button:active:not(:focus-visible) svg path:last-child {
+  stroke: white;
 }
 
 .projects__description a {
@@ -178,6 +177,13 @@
 .button-next--projects:active:not(:focus-visible) {
   background-color: #d1a9f0;
   border-color: var(--active-text-color);
+}
+
+.button-prev--projects.swiper-button-disabled,
+.button-next--projects.swiper-button-disabled {
+  cursor: auto;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .tippy-content {

@@ -162,44 +162,32 @@
   left: 3px;
   width: 30px;
   height: 30px;
-  border: 2px solid #ececec;
-  background-color: #ececec;
+  border: 2px solid var(--gray-color);
+  background-color: var(--gray-color);
   border-radius: 50%;
   opacity: 1;
   outline: none;
-  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: background-color linear 0.3s;
 }
 
-.swiper-button-prev--publication path,
-.swiper-button-next--publication path {
-  stroke: var(--dark-bg-color);
+.swiper-button-prev--publication:hover,
+.swiper-button-next--publication:hover {
+  background-color: var(--active-text-color);
 }
 
-.swiper-button-prev--publication:hover:not(:focus-visible),
-.swiper-button-next--publication:hover:not(:focus-visible) {
-  background-color: #d1a9f0;
-  border-color: #d1a9f0;
-}
-
-.swiper-button-prev--publication:active:not(:focus-visible),
-.swiper-button-next--publication:active:not(:focus-visible) {
-  background-color: #d1a9f0;
-  border-color: var(--active-text-color);
+.swiper-button-prev--publication:active,
+.swiper-button-next--publication:active {
+  background-color: var(--focus-bg-color);
 }
 
 .swiper-button-prev--publication:focus-visible,
 .swiper-button-next--publication:focus-visible {
-  border-color: var(--active-text-color);
-}
-
-.swiper-button-next--publication.swiper-button-disabled path,
-.swiper-button-prev--publication.swiper-button-disabled path {
-  stroke: #bbbbbb;
+  border: 2px solid var(--dark-bg-color);
 }
 
 .swiper-button-next--publication.swiper-button-disabled,
 .swiper-button-prev--publication.swiper-button-disabled {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .swiper-button-prev--publication:after,

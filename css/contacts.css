@@ -1,0 +1,202 @@
+.contacts {
+  position: relative;
+  padding-bottom: 125px;
+}
+
+.contacts__container::after {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+  top: 81px;
+  bottom: 0;
+  left: 0;
+  right: calc(50% + 100px);
+
+  border: 1px solid #cacaca;
+}
+
+@media (max-width: 1549px) {
+  .contacts__container::after {
+    right: calc(50% + 35px);
+  }
+}
+
+.contacts__title {
+  margin-bottom: 139px;
+}
+
+.contacts__name {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contacts__address {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.contacts__data {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.contacts__form {
+  margin-bottom: 36px;
+}
+
+.contacts__label {
+  display: block;
+  position: relative;
+}
+
+.contacts__form input {
+  display: block;
+  width: 400px;
+
+  padding: 10px 23px;
+  border: 1px solid var(--main-text-color);
+  border-radius: 100px;
+  color: var(--main-text-color);
+  background-color: transparent;
+  outline: none;
+
+  transition: background-color 0.4s ease-in-out;
+}
+
+.contacts__form input::placeholder {
+  color: #999999;
+}
+
+.contacts__form input:focus-visible,
+.contacts__form input:hover:not(:focus-visible) {
+  background-color: #eaeaea;
+}
+
+.contacts__form input:valid {
+  background-color: transparent;
+}
+
+.contacts__input-name {
+  margin-bottom: 23px;
+}
+
+.contacts__input-tel {
+  margin-bottom: 22px;
+}
+
+.contacts__btn {
+  width: 157px;
+  padding: 18px;
+  position: relative;
+
+  border: 2px solid var(--active-text-color);
+  border-radius: 100px;
+
+  font-size: 18px;
+  font-weight: 700;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.4s;
+  transition-property: background-color, border-color;
+}
+
+.contacts__btn::after {
+  content: "";
+
+  display: block;
+  position: absolute;
+
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+
+  border: 2px solid transparent;
+  border-radius: 100px;
+  transition: border-color 0.4s ease-in-out;
+}
+
+.contacts__btn:focus-visible::after {
+  border-color: var(--hover-text-color);
+}
+
+.contacts__btn:hover:not(:focus-visible) {
+  background-color: var(--active-text-color);
+}
+
+.contacts__btn:active:not(:focus-visible) {
+  background-color: var(--focus-bg-color);
+  border-color: #d1a9f0;
+}
+
+.contacts__links {
+  margin: 0;
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.contacts__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  opacity: 1;
+  outline: none;
+  transition: opacity 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.contacts__link:focus-visible,
+.contacts__link:hover:not(:focus-visible) {
+  opacity: 0.5;
+}
+
+.contacts__link:active:not(:focus-visible) {
+  border-color: #9643a4;
+}
+
+.contacts__map {
+  position: absolute;
+  right: 0;
+  top: 81px;
+  left: calc(50% - 278px);
+  bottom: 0;
+  background-color: gray;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(100%);
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[class*="controls__control"] {
+  inset: unset;
+  right: 0;
+}
+
+@media (max-width: 1549px) {
+  .contacts__map {
+    left: calc(50% - 35px);
+  }
+}
+
+/* just-validate */
+
+.js-validate-error-label {
+  font-size: 12px;
+  position: absolute;
+  left: 24px;
+  bottom: 100%;
+
+  font-size: 12px;
+}

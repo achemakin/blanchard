@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -2;
-  animation: hero 120s linear infinite;
+  animation: hero 20s linear infinite;
 }
 
 .hero__container {

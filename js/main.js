@@ -73,7 +73,6 @@ function closeBurger() {
 
 document.addEventListener('click', event => {
     const target = event.target;
-    console.log(target);
 
     // Открытие/закрытие меню при нажатии кнопки меню или за границами окна меню
     const submenuOpen = headerMenuEl.querySelector('.submenu-open');
@@ -223,6 +222,13 @@ document.addEventListener('click', event => {
 
 });
 
+
+// перерасчет высоты аккордеона при ресайзе
+window.addEventListener('resize', () => {
+ const activeAccordion = document.querySelector('.accordion--active')
+ activeAccordion.lastElementChild.style.maxHeight = activeAccordion.lastElementChild.scrollHeight + 'px';
+});
+
 // Закрытие меню при скролле
 window.addEventListener('scroll', (e) => {
     const submenuOpen = headerMenuEl.querySelector('.submenu-open');
@@ -344,11 +350,10 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   publicationSwiper.destroy();
 }
 
-// js-swiper-projects
+// Projects-swiper
 
 const projectsSwiper = new Swiper('.js-swiper-projects', {
   speed: 500,
-  loop: true,
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 20,
@@ -372,9 +377,30 @@ const projectsSwiper = new Swiper('.js-swiper-projects', {
   } 
 });
 
-document.querySelector('.button-prev--projects').addEventListener('click', () => projectsSwiper.slidePrev(500));
-document.querySelector('.button-next--projects').addEventListener('click', () => projectsSwiper.slideNext(500))
+const btnPrevProjects = document.querySelector('.button-prev--projects');
+const btnNextProjects = document.querySelector('.button-next--projects');
 
+btnPrevProjects.addEventListener('click', () => {
+  projectsSwiper.slidePrev(500);
+  if (projectsSwiper.isBeginning) {
+    btnPrevProjects.classList.add('swiper-button-disabled');
+  }
+
+  if (btnNextProjects.classList.contains('swiper-button-disabled')) {
+    btnNextProjects.classList.remove('swiper-button-disabled');
+  }
+});
+
+btnNextProjects.addEventListener('click', () => {
+  projectsSwiper.slideNext(500);
+  if (projectsSwiper.isEnd) {
+    btnNextProjects.classList.add('swiper-button-disabled');
+  }
+
+  if (btnPrevProjects.classList.contains('swiper-button-disabled')) {
+    btnPrevProjects.classList.remove('swiper-button-disabled');
+  }
+});
 
 window.addEventListener('resize', () => {
   if (window.matchMedia("(min-width: 768px)").matches && !eventsSwiper.destroyed) {
@@ -450,7 +476,6 @@ scrollEl.forEach(el => new SimpleBar(el,
   }
 ));
 
-
 // Search Button
 if (window.matchMedia("(max-width: 1399px)").matches) {  
   searchBtnEl.removeAttribute('disabled');
@@ -466,8 +491,87 @@ window.addEventListener('resize', () => {
   }
 });
 
+// Inputmask
+const inputTel = document.querySelector('.js-input-tel');
+const maskTel = new Inputmask('+7 (999) 999-99-99');
+maskTel.mask(inputTel);
+
+
 // Tippy.js
-tippy('[data-tippy-content]', {
-  trigger: "click",
-  // hideOnClick: 'toggle'
+if (typeof tippy !== 'undefined') tippy('[data-tippy-content]', {});
+
+// just-validate
+new JustValidate('.js-contacts-form', {
+  rules: {
+    name: {
+      required: true,
+      strength: {
+        custom: '^[a-zA-Zа-яА-ЯёЁ`][a-zA-Zа-яА-ЯёЁ` ]+[a-zA-Zа-яА-ЯёЁ`]?$',
+      }
+    },
+    phone: {
+      required: true,
+    }
+  },
+  messages: {
+    name: 'Недопустимый формат',
+    phone: 'Недопустимый формат',
+  }
 });
+
+
+// Yandex Map
+function init(){
+  const zoomControl = new ymaps.control.ZoomControl({
+    options: {
+      size: "small",
+      position: {
+        top: 270,
+        right: 16,
+      }
+    }
+  });
+
+  const geolocationControl = new ymaps.control.GeolocationControl({
+    options: {
+      position: {
+        top: 356,
+        right: 16,
+      }
+    }
+  });
+
+  const myPlacemark = new ymaps.Placemark([55.75792166721892,37.60099464195388], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/contacts/place-mark.svg',
+      iconImageSize: [20, 20],
+      //iconImageOffset: [-3, -42]
+  });  
+  
+  const contactsMap = new ymaps.Map("contacts-map", {
+      center: [55.75792166721892,37.60099464195388],
+      zoom: 14,
+      controls: [],
+  });   
+  
+  contactsMap.controls.add(zoomControl);
+  contactsMap.controls.add(geolocationControl);  
+  contactsMap.geoObjects.add(myPlacemark);
+
+  if (window.matchMedia("(max-width: 1399px)").matches) {
+    contactsMap.controls.remove(zoomControl);
+    contactsMap.controls.remove(geolocationControl);
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.matchMedia("(max-width: 1399px)").matches) {
+      contactsMap.controls.remove(zoomControl);
+      contactsMap.controls.remove(geolocationControl);
+    } else {
+      contactsMap.controls.add(zoomControl);
+      contactsMap.controls.add(geolocationControl);  
+    }
+  })
+}
+
+if (typeof ymaps !== 'undefined') ymaps.ready(init);

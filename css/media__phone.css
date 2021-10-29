@@ -299,6 +299,7 @@
 
   .projects__description a {
     display: block;
+    width: fit-content;
   }
 
   .projects__partners {
@@ -312,6 +313,16 @@
   .swiper-slide--projects {
     width: 264px;
     height: 106px;
+  }
+
+  /* Contacts */
+
+  .contacts__container::after {
+    right: calc(50% - 45px);
+  }
+
+  .contacts__map {
+    left: calc(50% + 45px);
   }
 
   /* Modals */
