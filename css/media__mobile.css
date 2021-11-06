@@ -685,6 +685,7 @@
   }
 
   .contacts__form {
+    width: 100%;
     margin-bottom: 23px;
   }
 

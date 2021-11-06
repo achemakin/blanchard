@@ -516,7 +516,25 @@ new JustValidate('.js-contacts-form', {
   messages: {
     name: 'Недопустимый формат',
     phone: 'Недопустимый формат',
-  }
+  },
+  submitHandler: async function (form, values, ajax) {
+    const formData = new FormData(form);
+    form.classList.add('contacts__form--sending');
+    const response = await fetch('mail.php', {
+      method: 'POST',
+      referrerPolicy: "strict-origin-when-cross-origin",
+      body: formData
+    });
+    
+    if (response.ok) {      
+      console.log(response);
+      form.reset();
+      form.classList.remove('contacts__form--sending');
+    } else {
+      console.log('error POST')
+      form.classList.remove('contacts__form--sending');
+    }
+  },
 });
 
 
@@ -543,7 +561,7 @@ function init(){
 
   const myPlacemark = new ymaps.Placemark([55.75792166721892,37.60099464195388], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/contacts/place-mark.svg',
+      iconImageHref: 'img/contacts/place-mark.svg',
       iconImageSize: [20, 20],
       //iconImageOffset: [-3, -42]
   });  
@@ -563,13 +581,21 @@ function init(){
     contactsMap.controls.remove(geolocationControl);
   }
 
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    contactsMap.behaviors.disable(['drag']);
+  }  
+
   window.addEventListener('resize', () => {
-    if (window.matchMedia("(max-width: 1399px)").matches) {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      contactsMap.behaviors.disable(['drag']);
+    } else if (window.matchMedia("(max-width: 1399px)").matches) {
       contactsMap.controls.remove(zoomControl);
       contactsMap.controls.remove(geolocationControl);
+      contactsMap.behaviors.enable(['drag']);
     } else {
       contactsMap.controls.add(zoomControl);
-      contactsMap.controls.add(geolocationControl);  
+      contactsMap.controls.add(geolocationControl);
+      contactsMap.behaviors.enable(['drag']); 
     }
   })
 }
