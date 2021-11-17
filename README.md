@@ -26,4 +26,4 @@ Inputmask
 Just-validate
 Simplebar
 Yandex maps API
-Popper
+Tippy
