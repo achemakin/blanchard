@@ -25,3 +25,4 @@ Just-validate
 Simplebar
 Yandex maps API
 Tippy
+PHP-mailer
